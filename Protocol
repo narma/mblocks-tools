@@ -1,0 +1,5747 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="client-nojs">
+<head>
+<title>Protocol - MinecraftCoalition</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.19.2" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/wiki/opensearch_desc.php" title="MinecraftCoalition (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.wiki.vg/wiki/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="MinecraftCoalition Atom feed" href="/wiki/index.php?title=Special:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://www.wiki.vg/wiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cskins.vector&amp;only=styles&amp;skin=vector&amp;*" />
+<meta name="ResourceLoaderDynamicStyles" content="" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: minecraft-wiki_:resourceloader:filter:minify-css:7:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+
+<script src="http://www.wiki.vg/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Protocol","wgTitle":"Protocol","wgCurRevisionId":3128,"wgArticleId":11,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Protocol Details","Minecraft Modern"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Protocol","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
+"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
+
+/* cache key: minecraft-wiki_:resourceloader:filter:minify-js:7:9983699ab6150ffa89a90653b2338ac8 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax"]);
+}</script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/wiki/skins/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Protocol skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content" class="mw-body">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">
+				<span dir="auto">Protocol</span>
+			</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+								<!-- tagline -->
+				<div id="siteSub">From MinecraftCoalition</div>
+				<!-- /tagline -->
+								<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					Jump to: <a href="#mw-head">navigation</a>,
+					<a href="#p-search">search</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodycontent -->
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>This page presents a dissection of the current stable <a rel="nofollow" class="external text" href="http://minecraft.net/game/">Minecraft</a> protocol. The current pre-release protocol is documented <a href="/Pre-release_protocol" title="Pre-release protocol">elsewhere</a>. 
+</p><p>Credit goes to the Great Old Ones, and the citizens of <a rel="nofollow" class="external text" href="irc://irc.freenode.net/#mcdevs">#mcdevs</a> who helped by providing packet dumps and insight. If you're having trouble, check out the <a href="/Protocol_FAQ" title="Protocol FAQ">FAQ</a>.  Make sure you check the <a href="/Data_Types" title="Data Types">Data Types</a> page.
+</p><p><b>Note:</b> While you may use the contents of this page without restriction to create servers, clients, bots, etc… you still need to provide the attribution above if you copy any of the contents of this page for publication elsewhere.
+</p><p>The protocol for Pocket Minecraft is substantially different, and is documented at <a href="/Pocket_Minecraft_Protocol" title="Pocket Minecraft Protocol">Pocket Minecraft Protocol</a>.
+</p><p>Additionally, the minecraft server supports two other protocols since beta 1.9pre4, <a href="/Rcon" title="Rcon">Rcon</a> (for remote administration) and <a href="/Query" title="Query">Query</a> (to query server properties). With the default settings, they listen on TCP 25575 and UDP 25565 respectively.
+</p><p>This is a fairly lengthy page, and to make it more readable certain terminology must be understood. Terms used on this page and their definition are provided below.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0">
+</td>
+<td class="col1"> Definition
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Player
+</td>
+<td class="col1"> When used in the singular, Player always refers to the client connected to the server
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Entity
+</td>
+<td class="col1"> Entity refers to any item, player, mob, minecart or boat in the world. This definition is subject to change as Notch extends the protocol
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> EID
+</td>
+<td class="col1"> An EID - or Entity ID - is a unique 4-byte integer used to identify a specific entity
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> XYZ
+</td>
+<td class="col1"> In this document, the axis names are the same as those used by Notch. Y points upwards, X points South, and Z points West.
+</td></tr></table>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Plugin_Channels"><span class="tocnumber">1</span> <span class="toctext">Plugin Channels</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Packets"><span class="tocnumber">2</span> <span class="toctext">Packets</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Keep_Alive_.280x00.29"><span class="tocnumber">2.1</span> <span class="toctext">Keep Alive (0x00)</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Login_Request_.280x01.29"><span class="tocnumber">2.2</span> <span class="toctext">Login Request (0x01)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Handshake_.280x02.29"><span class="tocnumber">2.3</span> <span class="toctext">Handshake (0x02)</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Chat_Message_.280x03.29"><span class="tocnumber">2.4</span> <span class="toctext">Chat Message (0x03)</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Time_Update_.280x04.29"><span class="tocnumber">2.5</span> <span class="toctext">Time Update (0x04)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Entity_Equipment_.280x05.29"><span class="tocnumber">2.6</span> <span class="toctext">Entity Equipment (0x05)</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Spawn_Position_.280x06.29"><span class="tocnumber">2.7</span> <span class="toctext">Spawn Position (0x06)</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Use_Entity_.280x07.29"><span class="tocnumber">2.8</span> <span class="toctext">Use Entity (0x07)</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Update_Health_.280x08.29"><span class="tocnumber">2.9</span> <span class="toctext">Update Health (0x08)</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Respawn_.280x09.29"><span class="tocnumber">2.10</span> <span class="toctext">Respawn (0x09)</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Player_.280x0A.29"><span class="tocnumber">2.11</span> <span class="toctext">Player (0x0A)</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Player_Position_.280x0B.29"><span class="tocnumber">2.12</span> <span class="toctext">Player Position (0x0B)</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Player_Look_.280x0C.29"><span class="tocnumber">2.13</span> <span class="toctext">Player Look (0x0C)</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Player_Position_and_Look_.280x0D.29"><span class="tocnumber">2.14</span> <span class="toctext">Player Position and Look (0x0D)</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Player_Digging_.280x0E.29"><span class="tocnumber">2.15</span> <span class="toctext">Player Digging (0x0E)</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Player_Block_Placement_.280x0F.29"><span class="tocnumber">2.16</span> <span class="toctext">Player Block Placement (0x0F)</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Held_Item_Change_.280x10.29"><span class="tocnumber">2.17</span> <span class="toctext">Held Item Change (0x10)</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Use_Bed_.280x11.29"><span class="tocnumber">2.18</span> <span class="toctext">Use Bed (0x11)</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Animation_.280x12.29"><span class="tocnumber">2.19</span> <span class="toctext">Animation (0x12)</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Entity_Action_.280x13.29"><span class="tocnumber">2.20</span> <span class="toctext">Entity Action (0x13)</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Spawn_Named_Entity_.280x14.29"><span class="tocnumber">2.21</span> <span class="toctext">Spawn Named Entity (0x14)</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Spawn_Dropped_Item_.280x15.29"><span class="tocnumber">2.22</span> <span class="toctext">Spawn Dropped Item (0x15)</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Collect_Item_.280x16.29"><span class="tocnumber">2.23</span> <span class="toctext">Collect Item (0x16)</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Spawn_Object.2FVehicle_.280x17.29"><span class="tocnumber">2.24</span> <span class="toctext">Spawn Object/Vehicle (0x17)</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Spawn_Mob_.280x18.29"><span class="tocnumber">2.25</span> <span class="toctext">Spawn Mob (0x18)</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Spawn_Painting_.280x19.29"><span class="tocnumber">2.26</span> <span class="toctext">Spawn Painting (0x19)</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Spawn_Experience_Orb_.280x1A.29"><span class="tocnumber">2.27</span> <span class="toctext">Spawn Experience Orb (0x1A)</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Entity_Velocity_.280x1C.29"><span class="tocnumber">2.28</span> <span class="toctext">Entity Velocity (0x1C)</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Destroy_Entity_.280x1D.29"><span class="tocnumber">2.29</span> <span class="toctext">Destroy Entity (0x1D)</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Entity_.280x1E.29"><span class="tocnumber">2.30</span> <span class="toctext">Entity (0x1E)</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Entity_Relative_Move_.280x1F.29"><span class="tocnumber">2.31</span> <span class="toctext">Entity Relative Move (0x1F)</span></a></li>
+<li class="toclevel-2 tocsection-34"><a href="#Entity_Look_.280x20.29"><span class="tocnumber">2.32</span> <span class="toctext">Entity Look (0x20)</span></a></li>
+<li class="toclevel-2 tocsection-35"><a href="#Entity_Look_and_Relative_Move_.280x21.29"><span class="tocnumber">2.33</span> <span class="toctext">Entity Look and Relative Move (0x21)</span></a></li>
+<li class="toclevel-2 tocsection-36"><a href="#Entity_Teleport_.280x22.29"><span class="tocnumber">2.34</span> <span class="toctext">Entity Teleport (0x22)</span></a></li>
+<li class="toclevel-2 tocsection-37"><a href="#Entity_Head_Look_.280x23.29"><span class="tocnumber">2.35</span> <span class="toctext">Entity Head Look (0x23)</span></a></li>
+<li class="toclevel-2 tocsection-38"><a href="#Entity_Status_.280x26.29"><span class="tocnumber">2.36</span> <span class="toctext">Entity Status (0x26)</span></a></li>
+<li class="toclevel-2 tocsection-39"><a href="#Attach_Entity_.280x27.29"><span class="tocnumber">2.37</span> <span class="toctext">Attach Entity (0x27)</span></a></li>
+<li class="toclevel-2 tocsection-40"><a href="#Entity_Metadata_.280x28.29"><span class="tocnumber">2.38</span> <span class="toctext">Entity Metadata (0x28)</span></a></li>
+<li class="toclevel-2 tocsection-41"><a href="#Entity_Effect_.280x29.29"><span class="tocnumber">2.39</span> <span class="toctext">Entity Effect (0x29)</span></a></li>
+<li class="toclevel-2 tocsection-42"><a href="#Remove_Entity_Effect_.280x2A.29"><span class="tocnumber">2.40</span> <span class="toctext">Remove Entity Effect (0x2A)</span></a></li>
+<li class="toclevel-2 tocsection-43"><a href="#Set_Experience_.280x2B.29"><span class="tocnumber">2.41</span> <span class="toctext">Set Experience (0x2B)</span></a></li>
+<li class="toclevel-2 tocsection-44"><a href="#Chunk_Data_.280x33.29"><span class="tocnumber">2.42</span> <span class="toctext">Chunk Data (0x33)</span></a></li>
+<li class="toclevel-2 tocsection-45"><a href="#Multi_Block_Change_.280x34.29"><span class="tocnumber">2.43</span> <span class="toctext">Multi Block Change (0x34)</span></a></li>
+<li class="toclevel-2 tocsection-46"><a href="#Block_Change_.280x35.29"><span class="tocnumber">2.44</span> <span class="toctext">Block Change (0x35)</span></a></li>
+<li class="toclevel-2 tocsection-47"><a href="#Block_Action_.280x36.29"><span class="tocnumber">2.45</span> <span class="toctext">Block Action (0x36)</span></a></li>
+<li class="toclevel-2 tocsection-48"><a href="#Block_Break_Animation_.280x37.29"><span class="tocnumber">2.46</span> <span class="toctext">Block Break Animation (0x37)</span></a></li>
+<li class="toclevel-2 tocsection-49"><a href="#Map_Chunk_Bulk_.280x38.29"><span class="tocnumber">2.47</span> <span class="toctext">Map Chunk Bulk (0x38)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-50"><a href="#Chunk_Bulk_Meta_Information_Structure"><span class="tocnumber">2.47.1</span> <span class="toctext">Chunk Bulk Meta Information Structure</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-51"><a href="#Explosion_.280x3C.29"><span class="tocnumber">2.48</span> <span class="toctext">Explosion (0x3C)</span></a></li>
+<li class="toclevel-2 tocsection-52"><a href="#Sound_Or_Particle_Effect_.280x3D.29"><span class="tocnumber">2.49</span> <span class="toctext">Sound Or Particle Effect (0x3D)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-53"><a href="#Effects"><span class="tocnumber">2.49.1</span> <span class="toctext">Effects</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-54"><a href="#Named_Sound_Effect_.280x3E.29"><span class="tocnumber">2.50</span> <span class="toctext">Named Sound Effect (0x3E)</span></a></li>
+<li class="toclevel-2 tocsection-55"><a href="#Change_Game_State_.280x46.29"><span class="tocnumber">2.51</span> <span class="toctext">Change Game State (0x46)</span></a></li>
+<li class="toclevel-2 tocsection-56"><a href="#Global_Entity_.280x47.29"><span class="tocnumber">2.52</span> <span class="toctext">Global Entity (0x47)</span></a></li>
+<li class="toclevel-2 tocsection-57"><a href="#Open_Window_.280x64.29"><span class="tocnumber">2.53</span> <span class="toctext">Open Window (0x64)</span></a></li>
+<li class="toclevel-2 tocsection-58"><a href="#Close_Window_.280x65.29"><span class="tocnumber">2.54</span> <span class="toctext">Close Window (0x65)</span></a></li>
+<li class="toclevel-2 tocsection-59"><a href="#Click_Window_.280x66.29"><span class="tocnumber">2.55</span> <span class="toctext">Click Window (0x66)</span></a></li>
+<li class="toclevel-2 tocsection-60"><a href="#Set_Slot_.280x67.29"><span class="tocnumber">2.56</span> <span class="toctext">Set Slot (0x67)</span></a></li>
+<li class="toclevel-2 tocsection-61"><a href="#Set_Window_Items_.280x68.29"><span class="tocnumber">2.57</span> <span class="toctext">Set Window Items (0x68)</span></a></li>
+<li class="toclevel-2 tocsection-62"><a href="#Update_Window_Property_.280x69.29"><span class="tocnumber">2.58</span> <span class="toctext">Update Window Property (0x69)</span></a></li>
+<li class="toclevel-2 tocsection-63"><a href="#Confirm_Transaction_.280x6A.29"><span class="tocnumber">2.59</span> <span class="toctext">Confirm Transaction (0x6A)</span></a></li>
+<li class="toclevel-2 tocsection-64"><a href="#Creative_Inventory_Action_.280x6B.29"><span class="tocnumber">2.60</span> <span class="toctext">Creative Inventory Action (0x6B)</span></a></li>
+<li class="toclevel-2 tocsection-65"><a href="#Enchant_Item_.280x6C.29"><span class="tocnumber">2.61</span> <span class="toctext">Enchant Item (0x6C)</span></a></li>
+<li class="toclevel-2 tocsection-66"><a href="#Update_Sign_.280x82.29"><span class="tocnumber">2.62</span> <span class="toctext">Update Sign (0x82)</span></a></li>
+<li class="toclevel-2 tocsection-67"><a href="#Item_Data_.280x83.29"><span class="tocnumber">2.63</span> <span class="toctext">Item Data (0x83)</span></a></li>
+<li class="toclevel-2 tocsection-68"><a href="#Update_Tile_Entity_.280x84.29"><span class="tocnumber">2.64</span> <span class="toctext">Update Tile Entity (0x84)</span></a></li>
+<li class="toclevel-2 tocsection-69"><a href="#Increment_Statistic_.280xC8.29"><span class="tocnumber">2.65</span> <span class="toctext">Increment Statistic (0xC8)</span></a></li>
+<li class="toclevel-2 tocsection-70"><a href="#Player_List_Item_.280xC9.29"><span class="tocnumber">2.66</span> <span class="toctext">Player List Item (0xC9)</span></a></li>
+<li class="toclevel-2 tocsection-71"><a href="#Player_Abilities_.280xCA.29"><span class="tocnumber">2.67</span> <span class="toctext">Player Abilities (0xCA)</span></a></li>
+<li class="toclevel-2 tocsection-72"><a href="#Tab-complete_.280xCB.29"><span class="tocnumber">2.68</span> <span class="toctext">Tab-complete (0xCB)</span></a></li>
+<li class="toclevel-2 tocsection-73"><a href="#Client_Settings_.280xCC.29"><span class="tocnumber">2.69</span> <span class="toctext">Client Settings (0xCC)</span></a></li>
+<li class="toclevel-2 tocsection-74"><a href="#Client_Statuses_.280xCD.29"><span class="tocnumber">2.70</span> <span class="toctext">Client Statuses (0xCD)</span></a></li>
+<li class="toclevel-2 tocsection-75"><a href="#Plugin_Message_.280xFA.29"><span class="tocnumber">2.71</span> <span class="toctext">Plugin Message (0xFA)</span></a></li>
+<li class="toclevel-2 tocsection-76"><a href="#Encryption_Key_Response_.280xFC.29"><span class="tocnumber">2.72</span> <span class="toctext">Encryption Key Response (0xFC)</span></a></li>
+<li class="toclevel-2 tocsection-77"><a href="#Encryption_Key_Request_.280xFD.29"><span class="tocnumber">2.73</span> <span class="toctext">Encryption Key Request (0xFD)</span></a></li>
+<li class="toclevel-2 tocsection-78"><a href="#Server_List_Ping_.280xFE.29"><span class="tocnumber">2.74</span> <span class="toctext">Server List Ping (0xFE)</span></a></li>
+<li class="toclevel-2 tocsection-79"><a href="#Disconnect.2FKick_.280xFF.29"><span class="tocnumber">2.75</span> <span class="toctext">Disconnect/Kick (0xFF)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-80"><a href="#See_Also"><span class="tocnumber">3</span> <span class="toctext">See Also</span></a></li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Plugin_Channels"> Plugin Channels </span></h2>
+<p>Plugin channels (present in 0xFA) are used to supplement the protocol. Information about these channels can be found at their page: <a href="/Plugin_channel" title="Plugin channel">plugin channel</a>
+</p>
+<h2> <span class="mw-headline" id="Packets"> Packets </span></h2>
+<p>All packets begin with a single "Packet ID" byte.  Listed packet size includes this byte.  Packets are either "server to client", "client to server", or both.  If not specified, assume that the packet can be sent both ways.  There is no "length" field; for variable length packets, you must parse to the end to determine the length.
+</p><p><br />
+</p><p><span id="0x00"></span>
+</p>
+<h3> <span class="mw-headline" id="Keep_Alive_.280x00.29"> Keep Alive (0x00) </span></h3>
+<p><i>Two-Way</i>
+</p><p>The server will frequently send out a keep-alive, each containing a random ID. The client must respond with the same packet.
+The Beta server will disconnect a client if it doesn't receive at least one packet before 1200 in-game ticks, and the Beta client will time out the connection under the same conditions. The client may send packets with Keep-alive ID=0.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0x00
+</td>
+<td class="col1 centeralign"> Keep-alive ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>957759560</code>
+</td>
+<td class="col4"> Server-generated random id
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 5 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x01"></span>
+</p>
+<h3> <span class="mw-headline" id="Login_Request_.280x01.29"> Login Request (0x01) </span></h3>
+<p><i>Server to Client</i>
+</p><p>See <a href="/Protocol_Encryption" title="Protocol Encryption">Protocol Encryption</a> for information on logging in.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="7"> 0x01
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>1298</code>
+</td>
+<td class="col4"> The Player's Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Level type
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> default
+</td>
+<td class="col3"> <code>default</code>, <code>flat</code>, or <code>largeBiomes</code>. level-type in server.properties
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Game mode
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> <code>0</code>: survival, <code>1</code>: creative, <code>2</code>: adventure. Bit 3 (<code>0x8</code>) is the hardcore flag
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Dimension
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> <code>-1</code>: nether, <code>0</code>: overworld, <code>1</code>: end
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Difficulty
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> <code>0</code> thru <code>3</code> for Peaceful, Easy, Normal, Hard
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Not used
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> Only 0 observed from vanilla server, was previously world height
+</td></tr>
+<tr class="row7">
+<td class="col0 centeralign"> Max players
+</td>
+<td class="col1 centeralign">  byte
+</td>
+<td class="col2 centeralign"> <code>8</code>
+</td>
+<td class="col3"> Used by the client to draw the player list
+</td></tr>
+<tr class="row8">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 12 bytes + length of strings
+</td></tr></table>
+<p><br />
+<span id="0x02"></span>
+</p>
+<h3> <span class="mw-headline" id="Handshake_.280x02.29"> Handshake (0x02) </span></h3>
+<p><i>Client to server</i>
+</p><p>See <a href="/Protocol_Encryption" title="Protocol Encryption">Protocol Encryption</a> for information on logging in.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0x02
+</td>
+<td class="col1 centeralign"> Protocol Version
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>47</code>
+</td>
+<td class="col4"> As of 1.4.2 the protocol version is 47
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Username
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>_AlexM</code>
+</td>
+<td class="col3"> The username of the player attempting to connect
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Server Host
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>localhost</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Server Port
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>25565</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 10 bytes + length of strings
+</td></tr></table>
+<p><br />
+	<span id="0x03"></span>
+</p>
+<h3> <span class="mw-headline" id="Chat_Message_.280x03.29"> Chat Message (0x03) </span></h3>
+<p><i>Two-Way</i>
+</p><p>The default server will check the message to see if it begins with a '/'. If it doesn't, the username of the sender is prepended and sent to all other clients (including the original sender). If it does, the server assumes it to be a command and attempts to process it. A message longer than 100 characters will cause the server to kick the client. (As of 1.3.2, the vanilla client appears to limit the text a user can enter to 100 charaters.) This limits the chat message packet length to 103 bytes. Note that this limit does not apply to incoming chat messages as the server may have prepended other information, not limited to, but usually including, a username.
+</p><p>A message longer than 119 characters will cause the server and client to print the message "Received string length longer than maximum allowed (X &gt; 119)", with no side effects.
+</p><p>For more information, see <a href="/Chat" title="Chat">Chat</a>.
+</p>
+<table class="wikitable">
+	<tr class="row0">
+		<td class="col0"> Packet ID</td>
+		<td class="col1"> Field Name</td>
+		<td class="col2"> Field Type</td>
+		<td class="col3"> Example</td>
+		<td class="col4"> Notes</td>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign"> 0x03</td>
+		<td class="col1 centeralign"> Message</td>
+		<td class="col2 centeralign"> string</td>
+		<td class="col3 centeralign"> <code>&lt;Bob&gt; Hello World!</code></td>
+		<td class="col4"> User input <b>must</b> be sanitized server-side</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Total Size:</td>
+		<td class="col1 rightalign" colspan="4"> 3 bytes + length of strings</td>
+	</tr>
+</table>
+
+
+<p><br />
+</p>
+
+<p>
+<span id="0x04"></span>
+</p>
+
+<h3> <span class="mw-headline" id="Time_Update_.280x04.29"> Time Update (0x04) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Time is based on ticks, where 20 ticks happen every second. There are 24000 ticks in a day, making Minecraft days exactly 20 minutes long.
+</p><p>The time of day is based on the timestamp modulo 24000. 0 is sunrise, 6000 is noon, 12000 is sunset, and 18000 is midnight.
+</p><p>The default SMP server increments the time by <code>20</code> every second.
+</p>
+
+<table class="wikitable">
+	<tr class="row0">
+		<th class="col0"> Packet ID</th>
+		<th class="col1"> Field Name</th>
+		<th class="col2"> Field Type</th>
+		<th class="col3"> Example</th>
+		<th class="col4"> Notes</th>
+	</tr>
+	<tr class="row1">
+		<td class="col0 centeralign" rowspan="2"> 0x04</td>
+		<td class="col1 centeralign"> Age of the world</td>
+		<td class="col2 centeralign"> long</td>
+		<td class="col3 centeralign"> 45464654</td>
+		<td class="col4"> In ticks; not changed by server commands</td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 centeralign"> Time of Day</td>
+		<td class="col1 centeralign"> long</td>
+		<td class="col2 centeralign"> 21321</td>
+		<td class="col3"> The world (or region) time, in ticks</td>
+	</tr>
+	<tr class="row3">
+		<th class="col0"> Total Size:</th>
+		<td class="col1 rightalign" colspan="4"> 17 Bytes</td>
+	</tr>
+</table>
+
+<p><br />
+</p><p><span id="0x05"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Equipment_.280x05.29"> Entity Equipment (0x05) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x05
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 0x00010643
+</td>
+<td class="col4"> Named Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Slot
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 4
+</td>
+<td class="col3"> Equipment slot: 0=held, 1-4=armor slot
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Item
+</td>
+<td class="col1 centeralign"> <a href="/Slot_Data" title="Slot Data">slot</a>
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Item in slot format
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 7 bytes + slot data
+</td></tr></table>
+<p><br />
+<span id="0x06"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Position_.280x06.29"> Spawn Position (0x06) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server after login to specify the coordinates of the spawn point (the point at which players spawn at, and which the compass points to). It can be sent at any time to update the point compasses point at.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x06
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>117</code>
+</td>
+<td class="col4 centeralign"> Spawn X in block coordinates
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>70</code>
+</td>
+<td class="col3 centeralign"> Spawn Y in block coordinates
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>-46</code>
+</td>
+<td class="col3 centeralign"> Spawn Z in block coordinates
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 13 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x07"></span>
+</p>
+<h3> <span class="mw-headline" id="Use_Entity_.280x07.29"> Use Entity (0x07) </span></h3>
+<p><i>Client to Server</i>
+</p><p>This packet is sent from the client to the server when the client attacks or right-clicks another entity (a player, minecart, etc).
+</p><p>A Notchian server only accepts this packet if the entity being attacked/used is visible without obstruction and within a 4-unit radius of the player's position.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x07
+</td>
+<td class="col1 centeralign"> User
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>1298</code>
+</td>
+<td class="col4"> The entity of the player (ignored by the server)
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Target
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>1805</code>
+</td>
+<td class="col3"> The entity the player is interacting with
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Mouse button
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> <code>true</code>
+</td>
+<td class="col3"> <code>true</code> when the player is left-clicking and <code>false</code> when right-clicking.
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 10 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x08"></span>
+</p>
+<h3> <span class="mw-headline" id="Update_Health_.280x08.29"> Update Health (0x08) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server to update/set the health of the player it is sent to. Added in protocol version 5.
+</p><p>Food saturation acts as a food "overcharge". Food values will not decrease while the saturation is over zero. Players logging in automatically get a saturation of 5.0. Eating food increases the saturation as well as the food bar.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x08
+</td>
+<td class="col1 centeralign"> Health
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> 20
+</td>
+<td class="col4"> 0 or less = dead, 20 = full HP
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Food
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 20
+</td>
+<td class="col3"> 0 - 20
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Food Saturation
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> 5.0
+</td>
+<td class="col3"> Seems to vary from 0.0 to 5.0 in integer increments
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 9 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x09"></span>
+</p>
+<h3> <span class="mw-headline" id="Respawn_.280x09.29"> Respawn (0x09) </span></h3>
+<p><i>Server to Client</i>
+</p><p>To change the player's dimension (overworld/nether/end), send them a respawn packet with the appropriate dimension, followed by prechunks/chunks for the new dimension, and finally a position and look packet.  You do not need to unload chunks, the client will do it automatically.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x09
+</td>
+<td class="col1 centeralign"> Dimension
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>1</code>
+</td>
+<td class="col4"> <code>-1</code>: The Nether, <code>0</code>: The Overworld, <code>1</code>: The End
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Difficulty
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> <code>0</code> thru <code>3</code> for Peaceful, Easy, Normal, Hard. <code>1</code> is always sent c-&gt;s
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Game mode
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> <code>0</code>: survival, <code>1</code>: creative, <code>2</code>: adventure. The hardcore flag is not included
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> World height
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>256</code>
+</td>
+<td class="col3"> Defaults to <code>256</code>
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Level type
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> default
+</td>
+<td class="col3"> See <a href="#0x01">0x01 login</a>
+</td></tr>
+<tr class="row6">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 11 bytes + length of string
+</td></tr></table>
+<p><span id="0x0A"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_.280x0A.29"> Player (0x0A) </span></h3>
+<p><i>Client to Server</i>
+</p><p>This packet is used to indicate whether the player is on ground (walking/swimming), or airborne (jumping/falling).
+</p><p>When dropping from sufficient height, fall damage is applied when this state goes from False to True. The amount of damage applied is based on the point where it last changed from True to False. Note that there are several movement related packets containing this state.
+</p><p>This packet was previously referred to as Flying
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0x0A
+</td>
+<td class="col1 centeralign"> On Ground
+</td>
+<td class="col2 centeralign"> boolean
+</td>
+<td class="col3 centeralign"> <code>1</code>
+</td>
+<td class="col4"> <code>True</code> if the client is on the ground, <code>False</code> otherwise
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 2 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x0B"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_Position_.280x0B.29"> Player Position (0x0B) </span></h3>
+<p><i>Client to Server</i>
+</p><p>Updates the players XYZ position on the server. 
+If <code>Stance - Y</code> is less than <code>0.1</code> or greater than <code>1.65</code>, the stance is illegal and the client will be kicked with the message “Illegal Stance”.
+If the distance between the last known position of the player on the server and the new position set by this packet is greater than 100 units will result in the client being kicked for "You moved too quickly&#160;:( (Hacking?)"
+Also if the absolute number of X or Z is set greater than <code>3.2E7D</code> the client will be kicked for "Illegal position" 
+</p><p><br />
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x0B
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> double
+</td>
+<td class="col3 rightalign"> <code>102.809</code>
+</td>
+<td class="col4"> Absolute position
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>70.00</code>
+</td>
+<td class="col3"> Absolute position
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Stance
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>71.62</code>
+</td>
+<td class="col3"> Used to modify the players bounding box when going up stairs, crouching, etc…
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>68.30</code>
+</td>
+<td class="col3"> Absolute position
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> On Ground
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3">
+<p>Derived from packet <a href="#0x0A">0x0A</a>
+</p>
+</td></tr>
+<tr class="row6">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 34 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x0C"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_Look_.280x0C.29"> Player Look (0x0C) </span></h3>
+<p><i>Client to Server</i>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="/File:Minecraft-trig-yaw.png" class="image"><img alt="" src="/wiki/images/thumb/1/1e/Minecraft-trig-yaw.png/180px-Minecraft-trig-yaw.png" width="180" height="180" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/File:Minecraft-trig-yaw.png" class="internal" title="Enlarge"><img src="/wiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>The unit circle for yaw</div></div></div>
+<p>Updates the direction the player is looking in.
+</p><p>Yaw is measured in degrees, and does not follow classical trigonometry rules. The unit circle of yaw on the xz-plane starts at (0, 1) and turns backwards towards (-1, 0), or in other words, it turns clockwise instead of counterclockwise. Additionally, yaw is not clamped to between 0 and 360 degrees; any number is valid, including negative numbers and numbers greater than 360.
+</p><p>Pitch is measured in degrees, where 0 is looking straight ahead, -90 is looking straight up, and 90 is looking straight down.
+</p><p>You can get a unit vector from a given yaw/pitch via:
+</p>
+<pre> x = -cos(pitch) * sin(yaw)
+ y = -sin(pitch)
+ z =  cos(pitch) * cos(yaw)
+</pre>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x0C
+</td>
+<td class="col1 centeralign"> Yaw
+</td>
+<td class="col2 centeralign"> float
+</td>
+<td class="col3 centeralign"> <code>0.00</code>
+</td>
+<td class="col4"> Absolute rotation on the X Axis, in degrees
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> <code>0.00</code>
+</td>
+<td class="col3"> Absolute rotation on the Y Axis, in degrees
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> On Ground
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3">
+<p>Derived from packet <a href="#0x0A">0x0A</a>
+</p>
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 10 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x0D"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_Position_and_Look_.280x0D.29"> Player Position and Look (0x0D) </span></h3>
+<p><i>Two-Way</i>
+</p><p>A combination of <a href="#0x0C">Player Look</a> and <a href="#0x0B">Player position</a>.
+</p><p><b>Client to Server</b>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="7"> 0x0D
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> double
+</td>
+<td class="col3 centeralign"> <code>6.5</code>
+</td>
+<td class="col4"> Absolute position
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>65.620000004768372</code>
+</td>
+<td class="col3"> Absolute position
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Stance
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>67.240000009536743</code>
+</td>
+<td class="col3"> Used to modify the players bounding box when going up stairs, crouching, etc…
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>7.5</code>
+</td>
+<td class="col3"> Absolute position
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Yaw
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> <code>0.0</code>
+</td>
+<td class="col3"> Absolute rotation on the X Axis
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> <code>0.0</code>
+</td>
+<td class="col3"> Absolute rotation on the Y Axis
+</td></tr>
+<tr class="row7">
+<td class="col0 centeralign"> On Ground
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+<p>Derived from packet <a href="#0x0A">0x0A</a>
+</p>
+</td></tr>
+<tr class="row8">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 42 bytes
+</td></tr></table>
+<p><b>Server to Client</b>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="7"> 0x0D
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> double
+</td>
+<td class="col3 centeralign"> <code>6.5</code>
+</td>
+<td class="col4"> Absolute position
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Stance
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>67.240000009536743</code>
+</td>
+<td class="col3"> Used to modify the players bounding box when going up stairs, crouching, etc…
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>65.620000004768372</code>
+</td>
+<td class="col3"> Absolute position
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign"> <code>7.5</code>
+</td>
+<td class="col3"> Absolute position
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Yaw
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> <code>0.0</code>
+</td>
+<td class="col3"> Absolute rotation on the X Axis
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> <code>0.0</code>
+</td>
+<td class="col3"> Absolute rotation on the Y Axis
+</td></tr>
+<tr class="row7">
+<td class="col0 centeralign"> On Ground
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+<p>Derived from packet <a href="#0x0A">0x0A</a>
+</p>
+</td></tr>
+<tr class="row8">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 42 bytes
+</td></tr></table>
+<p><a href="/File:Icon_exclaim.gif" class="image" title=":!:"><img alt=":!:" src="/wiki/images/0/05/Icon_exclaim.gif" width="15" height="15" /></a> Note that this packet differs from client Player &amp; Position Look packet - the Stance and Y are sent in a different order.
+</p><p><a href="/File:Icon_exclaim.gif" class="image" title=":!:"><img alt=":!:" src="/wiki/images/0/05/Icon_exclaim.gif" width="15" height="15" /></a> Stance and Y seems to be the opposite as in the table (from Client to Server = X, Y, Stance, Z, from Server to client = X, Stance, Y, Z) please confirm&#160;! [BackBone`:] The opposite stance&lt;-&gt;y confirmed, however the given structs had the server and client struct reversed, which I fixed.
+</p><p><a href="/File:Icon_exclaim.gif" class="image" title=":!:"><img alt=":!:" src="/wiki/images/0/05/Icon_exclaim.gif" width="15" height="15" /></a> When you connect to the official server, it will push a 0x0D packet.  If you do not immediately respond with a 0x0D (or maybe 0x0A-0x0C) packet with similar and valid information, it will have unexpected results, such as map chunks not loading and future 0x0A-0x0D packets being ignored.
+</p><p><br />
+</p><p><span id="0x0E"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_Digging_.280x0E.29"> Player Digging (0x0E) </span></h3>
+<p><i>Client to Server</i>
+</p><p>Sent when the player mines a block.  A Notchian server only accepts digging packets with coordinates within a 6-unit radius of the player's position.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x0E
+</td>
+<td class="col1 centeralign"> Status
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>1</code>
+</td>
+<td class="col4"> The action the player is taking against the block (see below)
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>32</code>
+</td>
+<td class="col3"> Block position
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>64</code>
+</td>
+<td class="col3"> Block position
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>32</code>
+</td>
+<td class="col3 leftalign"> Block position
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Face
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>3</code>
+</td>
+<td class="col3"> The face being hit (see below)
+</td></tr>
+<tr class="row6">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 12 bytes
+</td></tr></table>
+<p>Status can (currently) be one of six values:
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Meaning
+</td>
+<td class="col1"> Value
+</td></tr>
+<tr class="row1">
+<td class="col0 leftalign"> Started digging
+</td>
+<td class="col1 centeralign"> <code>0</code>
+</td></tr>
+<tr class="row2">
+<td class="col0 leftalign"> Cancelled digging
+</td>
+<td class="col1 centeralign"> <code>1</code>
+</td></tr>
+<tr class="row3">
+<td class="col0 leftalign"> Finished digging
+</td>
+<td class="col1 centeralign"> <code>2</code>
+</td></tr>
+<tr class="row4">
+<td class="col0 leftalign"> Check block
+</td>
+<td class="col1 centeralign"> <code>3</code>
+</td></tr>
+<tr class="row5">
+<td class="col0 leftalign"> Drop item
+</td>
+<td class="col1 centeralign"> <code>4</code>
+</td></tr>
+<tr class="row6">
+<td class="col0 leftalign"> Shoot arrow / finish eating
+</td>
+<td class="col1 centeralign"> <code>5</code>
+</td></tr></table>
+<p>Notchian clients send a 0 (started digging) when they start digging and a 2 (finished digging) once they think they are finished. If digging is aborted, no notice is sent to the server; the client simply does not send a 2 (finished digging).
+</p><p>Status code 3 is never sent by a Notchian client, but it is supported by Notchian servers. If the block coordinates are within a 16-unit radius of the player's position, the server responds with a <a href="#0x35">Block Change</a> packet containing that block's current type and metadata. No actual changes occur to the world in this case.
+</p><p>Status code 4 (drop item) is a special case.  In-game, when you use the Drop Item command (keypress 'q'), a dig packet with a status of 4, and all other values set to 0, is sent from client to server.
+</p><p>Status code 5 (shoot arrow / finish eating) is also a special case. The x, y and z fields are all set to 0 like above, with the exception of the face field, which is set to 255.
+</p><p>The face can be one of six values, representing the face being hit:
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0 leftalign"> Value
+</td>
+<td class="col1 centeralign"> 0
+</td>
+<td class="col2 centeralign"> 1
+</td>
+<td class="col3 centeralign"> 2
+</td>
+<td class="col4 centeralign"> 3
+</td>
+<td class="col5 centeralign"> 4
+</td>
+<td class="col6 centeralign"> 5
+</td></tr>
+<tr class="row1">
+<td class="col0 leftalign"> Offset
+</td>
+<td class="col1"> -Y
+</td>
+<td class="col2"> +Y
+</td>
+<td class="col3"> -Z
+</td>
+<td class="col4"> +Z
+</td>
+<td class="col5"> -X
+</td>
+<td class="col6"> +X
+</td></tr></table>
+<p>In 1.7.3, when a player opens a door with left click the server receives Packet 0xE+start digging and opens the door.
+</p><p><br />
+</p><p><span id="0x0F"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_Block_Placement_.280x0F.29"> Player Block Placement (0x0F) </span></h3>
+<p><i>Client to Server</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="8"> 0x0F
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>32</code>
+</td>
+<td class="col4"> Block position
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> unsigned byte
+</td>
+<td class="col2 centeralign"> <code>64</code>
+</td>
+<td class="col3"> Block position
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>32</code>
+</td>
+<td class="col3 leftalign"> Block position
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Direction
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>3</code>
+</td>
+<td class="col3"> The offset to use for block/item placement (see below)
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Held item
+</td>
+<td class="col1 centeralign"> <a href="/Slot_Data" title="Slot Data">slot</a>
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Cursor position X
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0 - 16
+</td>
+<td class="col3"> The position of the crosshair on the block
+</td></tr>
+<tr class="row7">
+<td class="col0 centeralign"> Cursor position Y
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0 - 16
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row8">
+<td class="col0 centeralign"> Cursor position Z
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0 - 16
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row9">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 14 bytes + slot data
+</td></tr></table>
+<p>In normal operation (ie placing a block), this packet is sent once, with the values set normally.
+</p><p>This packet has a special case where X, Y, Z, and Direction are all -1. (Note that Y is unsigned so set to 255.) This special packet indicates that the currently held item for the player should have its state updated such as eating food, shooting bows, using buckets, etc.
+</p><p>In a Notchian Beta client, the block or item ID corresponds to whatever the client is currently holding, and the client sends one of these packets any time a right-click is issued on a surface, so no assumptions can be made about the safety of the ID.  However, with the implementation of server-side inventory, a Notchian server seems to ignore the item ID, instead operating on server-side inventory information and holding selection. The client has been observed (1.2.5 and 1.3.2) to send both real item IDs and -1 in a single session.
+</p><p>Special note on using buckets:  When using buckets, the Notchian client might send two packets:  first a normal and then a special case.  The first normal packet is sent when you're looking at a block (e.g. the water you want to scoop up).  This normal packet does not appear to do anything with a Notchian server.  The second, special case packet appears to perform the action - based on current position/orientation and with a distance check - it appears that buckets can only be used within a radius of 6 units.
+</p><p><br />
+</p><p><span id="0x10"></span>
+</p>
+<h3> <span class="mw-headline" id="Held_Item_Change_.280x10.29"> Held Item Change (0x10) </span></h3>
+<p><i>Client to Server</i>
+</p><p>Sent when the player changes the slot selection
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0x10
+</td>
+<td class="col1 centeralign"> Slot ID
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> <code>1</code>
+</td>
+<td class="col4"> The slot which the player has selected (0-8)
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x11"></span>
+</p>
+<h3> <span class="mw-headline" id="Use_Bed_.280x11.29"> Use Bed (0x11) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet tells that a player goes to bed.
+</p><p>The client with the matching  Entity ID will go into bed mode.
+</p><p>This Packet is sent to all nearby players including the one sent to bed.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x11
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 89
+</td>
+<td class="col4"> Player ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Unknown
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3"> Only 0 has been observed
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> X coordinate
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> -247
+</td>
+<td class="col3"> Bed headboard X as block coordinate
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y coordinate
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 78
+</td>
+<td class="col3"> Bed headboard Y as block coordinate
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Z coordinate
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 128
+</td>
+<td class="col3"> Bed headboard Z as block coordinate
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 15 bytes
+</td></tr></table>
+<p><br />
+</p><p><br />
+<span id="0x12"></span>
+</p>
+<h3> <span class="mw-headline" id="Animation_.280x12.29"> Animation (0x12) </span></h3>
+<p><i>Two-Way</i>
+</p><p>Sent whenever an entity should change animation.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x12
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>55534</code>
+</td>
+<td class="col4"> Player ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Animation
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> Animation ID
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<p>Animation can be one of the following values:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> ID
+</th>
+<th> Animation
+</th></tr>
+<tr>
+<td> 0
+</td>
+<td> No animation
+</td></tr>
+<tr>
+<td> 1
+</td>
+<td> Swing arm
+</td></tr>
+<tr>
+<td> 2
+</td>
+<td> Damage animation
+</td></tr>
+<tr>
+<td> 3
+</td>
+<td> Leave bed
+</td></tr>
+<tr>
+<td> 5
+</td>
+<td> Eat food
+</td></tr>
+<tr>
+<td> 102
+</td>
+<td> (unknown)
+</td></tr>
+<tr>
+<td> 104
+</td>
+<td> Crouch
+</td></tr>
+<tr>
+<td> 105
+</td>
+<td> Uncrouch
+</td></tr></table>
+<p>Only <code>1</code> (swing arm) is sent by notchian clients. Crouching is sent via 0x13. Damage is server-side, and so is not sent by notchian clients. See also 0x26.
+</p><p><br />
+</p><p><span id="0x13"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Action_.280x13.29"> Entity Action (0x13) </span></h3>
+<p><i>Client to Server</i>
+</p><p>Sent at least when crouching, leaving a bed, or sprinting.
+To send action animation to client use 0x28.
+The client will send this with Action ID = 3 when "Leave Bed" is clicked.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x13
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>55534</code>
+</td>
+<td class="col4"> Player ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Action ID
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> The ID of the action, see below.
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<p>Action ID can be one of the following values:
+</p>
+<table class="wikitable">
+
+<tr>
+<th> ID
+</th>
+<th> Action
+</th></tr>
+<tr>
+<td> 1
+</td>
+<td> Crouch
+</td></tr>
+<tr>
+<td> 2
+</td>
+<td> Uncrouch
+</td></tr>
+<tr>
+<td> 3
+</td>
+<td> Leave bed
+</td></tr>
+<tr>
+<td> 4
+</td>
+<td> Start sprinting
+</td></tr>
+<tr>
+<td> 5
+</td>
+<td> Stop sprinting
+</td></tr></table>
+<p><br />
+</p><p><span id="0x14"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Named_Entity_.280x14.29"> Spawn Named Entity (0x14) </span></h3>
+<p><i>Server to Client</i>
+</p><p>The only named entities (at the moment) are players (either real or NPC/Bot). This packet is sent by the server when a player comes into visible range, <b>not</b> when a player joins.
+</p><p>Servers can, however, safely spawn player entities for players not in visible range. The client appears to handle it correctly.
+</p><p>At one point, the Notchian client was not okay with receiving player entity packets, including 0x14, that refer to its own username or EID; and would teleport to the absolute origin of the map and fall through the Void any time it received them. However, in more recent versions, it appears to handle them correctly, by spawning a new entity as directed (though future packets referring to the entity ID may be handled incorrectly).
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0 centeralign"> Packet ID
+</td>
+<td class="col1 rightalign"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="9"> 0x14
+</td>
+<td class="col1"> EID
+</td>
+<td class="col2"> int
+</td>
+<td class="col3"> <code>94453</code>
+</td>
+<td class="col4"> Player ID
+</td></tr>
+<tr class="row2">
+<td class="col0"> Player Name
+</td>
+<td class="col1"> string
+</td>
+<td class="col2"> <code>Twdtwd</code>
+</td>
+<td class="col3"> Max length of 16
+</td></tr>
+<tr class="row3">
+<td class="col0"> X
+</td>
+<td class="col1"> int
+</td>
+<td class="col2"> <code>784</code>
+</td>
+<td class="col3"> Player X as Absolute Integer
+</td></tr>
+<tr class="row4">
+<td class="col0"> Y
+</td>
+<td class="col1"> int
+</td>
+<td class="col2"> <code>2131</code>
+</td>
+<td class="col3"> Player Y as Absolute Integer
+</td></tr>
+<tr class="row5">
+<td class="col0"> Z
+</td>
+<td class="col1"> int
+</td>
+<td class="col2"> <code>-752</code>
+</td>
+<td class="col3"> Player Z as Absolute Integer
+</td></tr>
+<tr class="row6">
+<td class="col0"> Yaw
+</td>
+<td class="col1"> byte
+</td>
+<td class="col2"> <code>0</code>
+</td>
+<td class="col3"> Player rotation as a packed byte
+</td></tr>
+<tr class="row7">
+<td class="col0"> Pitch
+</td>
+<td class="col1"> byte
+</td>
+<td class="col2"> <code>0</code>
+</td>
+<td class="col3"> Player rotation as a packed byte
+</td></tr>
+<tr class="row8">
+<td class="col0"> Current Item
+</td>
+<td class="col1"> short
+</td>
+<td class="col2"> <code>0</code>
+</td>
+<td class="col3"> The item the player is currently holding. Note that this should be 0 for "no item", unlike -1 used in other packets. A negative value crashes clients.
+</td></tr>
+<tr class="row9">
+<td class="col0"> Metadata
+</td>
+<td class="col1"> <a href="/Entities#Entity_Metadata_Format" title="Entities">Metadata</a>
+</td>
+<td class="col2"> <code></code>
+</td>
+<td class="col3"> The 1.3 client crashes on packets with no metadata, but the server can send any metadata key of 0, 1 or 8 and the client is fine.
+</td></tr>
+<tr class="row10">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 22 bytes + length of strings + metadata (at least 1)
+</td></tr></table>
+<p><br />
+<span id="0x15"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Dropped_Item_.280x15.29"> Spawn Dropped Item (0x15) </span></h3>
+<p><i>Server to Client</i>
+</p><p>An 0x15 packet is sent by the server whenever an item on the ground (say a pickaxe thrown on the ground) comes into range of the player. (note: this means range for item vision, not range for pickup!) It used to be sent by the client when an item is dropped from a tile (chest or furnace) or from inventory, but that is now done with the new packets for server-side inventory (see <a href="#0x66">Window click (0x66)</a>).
+</p><p>It is completely acceptable for servers to ignore the EID issued by the client in this packet and instead create a new packet with a server-controlled EID when sending this packet out to clients.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0 centeralign"> Packet ID
+</td>
+<td class="col1 rightalign"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="8"> 0x15
+</td>
+<td class="col1"> EID
+</td>
+<td class="col2"> int
+</td>
+<td class="col3"> <code>157617</code>
+</td>
+<td class="col4"> Unique entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0"> Slot
+</td>
+<td class="col1"> <a href="/Slot_Data" title="Slot Data">slot</a>
+</td>
+<td class="col2">
+</td>
+<td class="col3"> The item to be spawned
+</td></tr>
+<tr class="row3">
+<td class="col0"> X
+</td>
+<td class="col1"> int
+</td>
+<td class="col2"> <code>133</code>
+</td>
+<td class="col3"> Item X as Absolute Integer
+</td></tr>
+<tr class="row4">
+<td class="col0"> Y
+</td>
+<td class="col1"> int
+</td>
+<td class="col2"> <code>913</code>
+</td>
+<td class="col3"> Item Y as Absolute Integer
+</td></tr>
+<tr class="row5">
+<td class="col0"> Z
+</td>
+<td class="col1"> int
+</td>
+<td class="col2"> <code>63552</code>
+</td>
+<td class="col3"> Item Z as Absolute Integer
+</td></tr>
+<tr class="row6">
+<td class="col0"> Rotation
+</td>
+<td class="col1"> byte
+</td>
+<td class="col2"> <code>252</code>
+</td>
+<td class="col3"> Item rotation as a packed byte
+</td></tr>
+<tr class="row7">
+<td class="col0"> Pitch
+</td>
+<td class="col1"> byte
+</td>
+<td class="col2"> <code>25</code>
+</td>
+<td class="col3"> Item pitch as a packed byte
+</td></tr>
+<tr class="row8">
+<td class="col0"> Roll
+</td>
+<td class="col1"> byte
+</td>
+<td class="col2"> <code>12</code>
+</td>
+<td class="col3"> Item roll as a packed byte
+</td></tr>
+<tr class="row9">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 20 bytes + slot data
+</td></tr></table>
+<p>The <b>"Damage" field</b> inside the slot data structure is also used to store item metadata.  For example: you mined birch wood (its id is the same as normal wood) so you must set damage to the metadata of birch wood (2). The same for wool. Id is the same but data is different.  For example: you mined blue wool so your damage field should send value 0xB.
+</p><p><br />
+</p><p><span id="0x16"></span>
+</p>
+<h3> <span class="mw-headline" id="Collect_Item_.280x16.29"> Collect Item (0x16) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server when someone picks up an item lying on the ground - its sole purpose appears to be the animation of the item flying towards you. It doesn't destroy the entity in the client memory (<a href="#0x1D">0x1D</a> does that), and it doesn't add it to your inventory (<a href="#0x68">0x68</a> does that). The server only checks for items to be picked up after each <a href="#0x0B">Player Position</a> and <a href="#0x0D">Player Position &amp; Look</a> packet sent by the client.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x16
+</td>
+<td class="col1 centeralign"> Collected EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>38</code>
+</td>
+<td class="col4 leftalign">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Collector EID
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>20</code>
+</td>
+<td class="col3 leftalign">
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 9 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x17"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Object.2FVehicle_.280x17.29"> Spawn Object/Vehicle (0x17) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server when an Object/Vehicle is created. The throwers entity id is now used for fishing floats too.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="9"> 0x17
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>62</code>
+</td>
+<td class="col4"> Entity ID of the Object
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Type
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>11</code>
+</td>
+<td class="col3"> The type of object (see <a href="/Entities#Objects" title="Entities">Entities#Objects</a>)
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>16080</code>
+</td>
+<td class="col3"> The Absolute Integer X Position of the object
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>2299</code>
+</td>
+<td class="col3"> The Absolute Integer Y Position of the object
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>592</code>
+</td>
+<td class="col3"> The Absolute Integer Z Position of the object
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> <a href="/Object_Data" title="Object Data">Object Data</a>
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> If this is bigger than 0, the next 3 fields are sent.
+</td></tr>
+<tr class="row7">
+<td class="col0 centeralign"> Speed X
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> Not sent if the Object data is 0. The speed of this entity along the X axis.
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Speed Y
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> Not sent if the Object data is 0. The speed of this entity along the Y axis.
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Speed Z
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> Not sent if the Object data is 0. The speed of this entity along the Z axis.
+</td></tr>
+<tr class="row6">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 22 or 28 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x18"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Mob_.280x18.29"> Spawn Mob (0x18) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server when a Mob Entity is Spawned
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="12"> 0x18
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>446</code>
+</td>
+<td class="col4"> Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Type
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>91</code>
+</td>
+<td class="col3"> The type of mob. See <a href="/Entities#Mobs" title="Entities">Entities#Mobs</a>
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>13366</code>
+</td>
+<td class="col3"> The Absolute Integer X Position of the object
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>2176</code>
+</td>
+<td class="col3"> The Absolute Integer Y Position of the object
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>1680</code>
+</td>
+<td class="col3"> The Absolute Integer Z Position of the object
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Yaw
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>-27</code>
+</td>
+<td class="col3"> The yaw in steps of 2p/256
+</td></tr>
+<tr class="row7">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> The pitch in steps of 2p/256
+</td></tr>
+<tr class="row8">
+<td class="col0 centeralign"> Head Yaw
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Head yaw in steps of 2p/256
+</td></tr>
+<tr class="row9">
+<td class="col0 centeralign"> Velocity Z
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row10">
+<td class="col0 centeralign"> Velocity X
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row11">
+<td class="col0 centeralign"> Velocity Y
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row12">
+<td class="col0 centeralign"> Metadata
+</td>
+<td class="col1 centeralign"> <a href="/Entities#Entity_Metadata_Format" title="Entities">Metadata</a>
+</td>
+<td class="col2 centeralign"> <code>127</code>
+</td>
+<td class="col3"> Varies by mob, see <a href="/Entities" title="Entities">Entities</a>
+</td></tr>
+<tr class="row13">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 27 bytes + Metadata (at least 1)
+</td></tr></table>
+<p><br />
+</p><p><span id="0x19"></span>
+</p><p><br />
+<span id="0x19"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Painting_.280x19.29"> Spawn Painting (0x19) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet shows location, name, and type of painting.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x19
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>0x00000326</code>
+</td>
+<td class="col4 centeralign"> Unique entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Title
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>Creepers</code>
+</td>
+<td class="col3 centeralign"> Name of the painting; max length 13 (length of "SkullAndRoses")
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>50</code>
+</td>
+<td class="col3 centeralign"> Center X coordinate
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>66</code>
+</td>
+<td class="col3 centeralign"> Center Y coordinate
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>-50</code>
+</td>
+<td class="col3 centeralign"> Center Z coordinate
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Direction
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3 centeralign"> Direction the painting faces (0 -z, 1 -x, 2 +z, 3 +x)
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 23 bytes + length of string
+</td></tr></table>
+<p>Calculating the center of an image: given a (width x height) grid of cells, with (0, 0) being the top left corner, the center is (max(0, width / 2 - 1), height / 2). E.g.
+</p><p>2x1 (1, 0)
+4x4 (1, 2)
+</p><p><br />
+</p><p><span id="0x1A"></span>
+</p>
+<h3> <span class="mw-headline" id="Spawn_Experience_Orb_.280x1A.29"> Spawn Experience Orb (0x1A) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Spawns one or more experience orbs. Coordinates are in absolute units.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x1A
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 105668
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row2">
+<td class="col1 centeralign"> x
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> -1143
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row3">
+<td class="col1 centeralign"> y
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 1952
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row4">
+<td class="col1 centeralign"> z
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 1166
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row5">
+<td class="col1 centeralign"> count
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> 7
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 19 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x1B"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Velocity_.280x1C.29"> Entity Velocity (0x1C) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is new to version 4 of the protocol, and is believed to be Entity Velocity/Motion.
+</p><p>Velocity is believed to be in units of 1/32000 of a block per server tick (200ms);
+for example, -1343 would move (-1343 / 32000) = -0.04196875 blocks per tick (or -0.20984375 blocks per second).
+</p><p>Each axis' velocity is capped between -0.9 and 0.9 blocks per tick (packet values -28800 to 28800).
+</p><p>(This packet data values are not fully verified)
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0x1C
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>1805</code>
+</td>
+<td class="col4">
+<p>The entity ID
+</p>
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Velocity X
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>-1343</code>
+</td>
+<td class="col3">
+<p>Velocity on the X axis
+</p>
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Velocity Y
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+<p>Velocity on the Y axis
+</p>
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Velocity Z
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+<p>Velocity on the Z axis
+</p>
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 11 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x1D"></span>
+</p>
+<h3> <span class="mw-headline" id="Destroy_Entity_.280x1D.29"> Destroy Entity (0x1D) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server when an list of Entities is to be destroyed on the client.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0" rowspan="2"> 0x1D
+</td>
+<td class="col1 centeralign"> Entity Count
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>3</code>
+</td>
+<td class="col4 centeralign"> The amount of entities which should be destroyed
+</td></tr>
+<tr class="row21">
+<td class="col0 centeralign"> Entity IDs
+</td>
+<td class="col1 centeralign"> array of int
+</td>
+<td class="col2 centeralign"> <code>452, 546, 123</code>
+</td>
+<td class="col3 centeralign"> The list of entity ids which should be destroyed
+</td></tr>
+<tr class="row32">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 2 + (entity count * 4) bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x1E"></span>
+</p><p><br />
+<span id="0x1E"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_.280x1E.29"> Entity (0x1E) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Most entity-related packets are subclasses of this packet. When sent from the server to the client, it may initialize the entry.
+</p><p>For player entities, either this packet or any move/look packet is sent every game tick.
+So the meaning of this packet is basically that the entity did not move/look since the last such packet.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0x1E
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>446</code>
+</td>
+<td class="col4 centeralign"> Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 5 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x1F"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Relative_Move_.280x1F.29"> Entity Relative Move (0x1F) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is sent by the server when an entity moves less then 4 blocks; if an entity moves more than 4 blocks <a href="#0x22">Entity Teleport</a> should be sent instead.
+</p><p>This packet allows at most four blocks movement in any direction, because byte range is from -128 to 127. Movement is an offset of Absolute Int; to convert relative move to block coordinate offset, divide by 32.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0x1F
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>459</code>
+</td>
+<td class="col4"> Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> dX
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> X axis Relative movement as an Absolute Integer
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> dY
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>-7</code>
+</td>
+<td class="col3"> Y axis Relative movement as an Absolute Integer
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> dZ
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>5</code>
+</td>
+<td class="col3"> Z axis Relative movement as an Absolute Integer
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 8 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x20"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Look_.280x20.29"> Entity Look (0x20) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is sent by the server when an entity rotates.  Example: "Yaw" field 64 means a 90 degree turn.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x20
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>459</code>
+</td>
+<td class="col4"> Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Yaw
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>126</code>
+</td>
+<td class="col3"> The X Axis rotation as a fraction of 360
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> The Y Axis rotation as a fraction of 360
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 7 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x21"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Look_and_Relative_Move_.280x21.29"> Entity Look and Relative Move (0x21) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is sent by the server when an entity rotates and moves.
+Since a byte range is limited from -128 to 127, and movement is offset of Absolute Int,
+this packet allows at most four blocks movement in any direction. (-128/32 == -4)
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x21
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>459</code>
+</td>
+<td class="col4"> Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> dX
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> X axis Relative movement as an Absolute Integer
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> dY
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>-7</code>
+</td>
+<td class="col3"> Y axis Relative movement as an Absolute Integer
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> dZ
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>5</code>
+</td>
+<td class="col3"> Z axis Relative movement as an Absolute Integer
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Yaw
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>126</code>
+</td>
+<td class="col3"> The X Axis rotation as a fraction of 360
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> The Y Axis rotation as a fraction of 360
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 10 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x22"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Teleport_.280x22.29"> Entity Teleport (0x22) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is sent by the server when an entity moves more than 4 blocks.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x22
+</td>
+<td class="col1 centeralign"> EID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>459</code>
+</td>
+<td class="col4"> Entity ID
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>14162</code>
+</td>
+<td class="col3"> X axis position as an Absolute Integer
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>2176</code>
+</td>
+<td class="col3"> Y axis position as an Absolute Integer
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>1111</code>
+</td>
+<td class="col3"> Z axis position as an Absolute Integer
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Yaw
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>126</code>
+</td>
+<td class="col3"> The X Axis rotation as a fraction of 360
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> The Y Axis rotation as a fraction of 360
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 19 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x23"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Head_Look_.280x23.29"> Entity Head Look (0x23) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Changes the direction an entity's head is facing.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x23
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Head Yaw
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Head yaw in steps of 2p/256
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x26"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Status_.280x26.29"> Entity Status (0x26) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x26
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> Int
+</td>
+<td class="col3 centeralign"> 34353
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Entity Status
+</td>
+<td class="col1 centeralign"> Byte
+</td>
+<td class="col2 centeralign"> 0x03
+</td>
+<td class="col3"> See below
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<table class="wikitable">
+
+<tr>
+<th> Entity Status
+</th>
+<th> Meaning
+</th></tr>
+<tr>
+<td> 2
+</td>
+<td> Entity hurt
+</td></tr>
+<tr>
+<td> 3
+</td>
+<td> Entity dead
+</td></tr>
+<tr>
+<td> 6
+</td>
+<td> Wolf taming
+</td></tr>
+<tr>
+<td> 7
+</td>
+<td> Wolf tamed
+</td></tr>
+<tr>
+<td> 8
+</td>
+<td> Wolf shaking water off itself
+</td></tr>
+<tr>
+<td> 9
+</td>
+<td> (of self) Eating accepted by server
+</td></tr>
+<tr>
+<td> 10
+</td>
+<td> Sheep eating grass
+</td></tr></table>
+<p><br />
+</p><p><span id="0x27"></span>
+</p>
+<h3> <span class="mw-headline" id="Attach_Entity_.280x27.29"> Attach Entity (0x27) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is new to version 4 of the protocol, and is believed to be Attach Entity.
+</p><p>This packet is sent when a player has been attached to an entity (e.g. Minecart)
+</p><p>(This packet data values are not fully verified)
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x27
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>1298</code>
+</td>
+<td class="col4">
+<p>The player entity ID being attached
+</p>
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Vehicle ID
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>1805</code>
+</td>
+<td class="col3">
+<p>The vehicle entity ID attached to (-1 for unattaching)
+</p>
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 9 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x28"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Metadata_.280x28.29"> Entity Metadata (0x28) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x28
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>0x00000326</code>
+</td>
+<td class="col4 centeralign"> Unique entity ID to update.
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Entity Metadata
+</td>
+<td class="col1 centeralign"> <a href="/Entities#Entity_Metadata_Format" title="Entities">Metadata</a>
+</td>
+<td class="col2 centeralign"> <code>0x00 0x01 0x7F</code>
+</td>
+<td class="col3 centeralign"> Metadata varies by entity. See <a href="/Entities" title="Entities">Entities</a>
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 5 bytes + Metadata
+</td></tr></table>
+<p><br />
+</p><p><span id="0x29"></span>
+</p>
+<h3> <span class="mw-headline" id="Entity_Effect_.280x29.29"> Entity Effect (0x29) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0x29
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>14</code>
+</td>
+<td class="col4"> Entity ID of a player
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Effect ID
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>17</code>
+</td>
+<td class="col3"> See <a rel="nofollow" class="external text" href="http://www.minecraftwiki.net/wiki/Potion_effect#Parameters">here</a>
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Amplifier
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Duration
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>64</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 9 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x2A"></span>
+</p>
+<h3> <span class="mw-headline" id="Remove_Entity_Effect_.280x2A.29"> Remove Entity Effect (0x2A) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x2a
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> Entity ID of a player
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Effect ID
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>17</code>
+</td>
+<td class="col3"> See <a href="#Effects">table above</a>
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x2B"></span>
+</p>
+<h3> <span class="mw-headline" id="Set_Experience_.280x2B.29"> Set Experience (0x2B) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server when the client should change experience levels.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x2B
+</td>
+<td class="col1 centeralign"> Experience bar
+</td>
+<td class="col2 centeralign"> float
+</td>
+<td class="col3 centeralign"> <code>0.5960060358047485</code>
+</td>
+<td class="col4"> Used for drawing the experience bar - value is between 0 and 1.
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Level
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>8</code>
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Total experience
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>130</code>
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 9 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x33"></span>
+</p>
+<h3> <span class="mw-headline" id="Chunk_Data_.280x33.29"> Chunk Data (0x33) </span></h3>
+<p><i>Server to Client</i>
+</p><p>See also: <a href="/Map_Format" title="Map Format">Map Format</a>
+</p><p>Chunks are sent a column at a time, with some sections optionally missing from each packet (those consisting only of air).
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="7"> 0x33
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> Chunk X Coordinate (*16 to get true X)
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Chunk Z Coordinate (*16 to get true Z)
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Ground-up continuous
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> This is True if the packet represents all sections in this vertical column, where the primary bit map specifies exactly which sections are included, and which are air.
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Primary bit map
+</td>
+<td class="col1 centeralign"> unsigned short
+</td>
+<td class="col2 centeralign"> 15
+</td>
+<td class="col3"> Bitmask with 1 for every 16x16x16 section which data follows in the compressed data.
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Add bit map
+</td>
+<td class="col1 centeralign"> unsigned short
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3"> Same as above, but this is used exclusively for the 'add' portion of the payload
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Compressed size
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Size of compressed chunk data.
+</td></tr>
+<tr class="row78">
+<td class="col0 centeralign"> Compressed data
+</td>
+<td class="col1 centeralign"> unsigned byte array
+</td>
+<td class="col2 centeralign"> <code>…</code>
+</td>
+<td class="col3"> The chunk data is compressed using ZLib Deflate function.
+</td></tr>
+<tr class="row8">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 18 bytes + Compressed chunk size
+</td></tr></table>
+<p>The payload is a set of 16x16x16 sections, sharing the same X and Z coordinates. What is and isn't sent is provided by the two bitmask fields. The least significant bit is '1' if the section spanning from Y=0 to Y=15 is not completely air, and so forth. For block IDs, metadata, and lighting, the primary bitmask is used. A secondary bitmask is used for 'add' data, which is Mojang's means of provided Block IDs past 256. In vanilla minecraft, you can expect this to always be zero.  The sections included in this packet progress from bottom to top, where Y=0 is the bottom.
+</p><p>The data is compressed using the deflate() function in <a rel="nofollow" class="external text" href="http://www.zlib.net/">zlib</a>. After uncompressing, the data consists of five (or six) sequential sections, in order:
+</p>
+<ul><li> Block type array (1 byte per block, 4096 bytes per section)
+</li><li> Block metadata array (half byte per block, 2048 bytes per section)
+</li><li> Block light array (half byte per block, 2048 bytes per section)
+</li><li> Sky light array (half byte per block, 2048 bytes per section)
+</li><li> Add array (half byte per block, 2048 bytes per section, uses second bitmask)
+</li><li> Biome array (1 byte per XZ coordinate, 256 bytes total, only sent if 'ground up continuous' is true)
+</li></ul>
+<p>Each section is the concatenated data of all included sections (i.e. the block type array contains the block types of all included sections).
+</p><p>In each section except biome data, your decoder loop should look something like this:
+<code>
+</p>
+<pre> //Loop over 16x16x16 sections in the 16x256x16 chunk
+ for (i=0;i&lt;16;i++) {
+   //If the bitmask indicates this chunk has been sent...
+   if (bitmask &amp; 1 &lt;&lt; i) {
+     //Read data...
+     cubic_chunk_data = io.read(4096); //2048 for the other arrays, where you'll need to split the data
+     
+     for(int j=0; j&lt;len(cubic_chunk_data); j++) {
+       //Retrieve x,y,z and data from each element in cubic_chunk_array
+       
+       //Byte arrays
+       x = chunk_x*16 + j &amp; 0x0F;
+       y = i*16 + j &gt;&gt; 8;
+       z = chunk_z*16 + (j &amp; 0xF0) &gt;&gt; 4;
+       data = cubic_chunk_data[j]
+       
+       //Nibble arrays
+       data1 = cubic_chunk_data[j] &amp; 0x0F;
+       data2 = cubic_chunk_data[j] &gt;&gt; 4;
+       
+       k = 2*j;
+       x1 = chunk_x*16 + k &amp; 0x0F;
+       y1 = i*16       + k &gt;&gt; 8;
+       z1 = chunk_z*16 + (k &amp; 0xF0) &gt;&gt; 4;
+       
+       k++;
+       x2 = chunk_x*16 + k &amp; 0x0F;
+       y2 = i*16       + k &gt;&gt; 8;
+       z2 = chunk_z*16 + (k &amp; 0xF0) &gt;&gt; 4;
+      }
+   }
+ }
+</pre>
+<p></code>
+</p><p>Each biome byte can have the values from 0 to 22, higher will cause the client to crash.
+</p><p>The 'add' array uses the second bitmask. Block IDs are presumed to be <code>block_id | add &lt;&lt; 8</code>
+</p><p><a rel="nofollow" class="external text" href="https://github.com/SirCmpwn/Craft.Net/blob/master/Craft.Net.Server/Packets/ChunkDataPacket.cs">Here's</a> an example of how this packet could be encoded.
+</p><p><span id="0x34"></span>
+</p>
+<h3> <span class="mw-headline" id="Multi_Block_Change_.280x34.29"> Multi Block Change (0x34) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x34
+</td>
+<td class="col1 centeralign"> Chunk X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>-9</code>
+</td>
+<td class="col4"> Chunk X Coordinate
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Chunk Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>12</code>
+</td>
+<td class="col3"> Chunk Z Coordinate
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Record count
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> The number of blocks affected
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Data size
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> The total size of the data, in bytes. Should always be 4*record count - please confirm.
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Data
+</td>
+<td class="col1 centeralign">
+</td>
+<td class="col2 centeralign"> <code>…</code>
+</td>
+<td class="col3"> Coordinates, type, and metadata of blocks to change (see below table).
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 15 bytes + Arrays
+</td></tr></table>
+<p>Each record is four bytes.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Bit mask
+</td>
+<td class="col1"> Width
+</td>
+<td class="col2"> Meaning
+</td></tr>
+<tr class="row1">
+<td class="col0"> 00 00 00 0F
+</td>
+<td class="col1"> 4 bits
+</td>
+<td class="col2"> Block metadata
+</td></tr>
+<tr class="row2">
+<td class="col0"> 00 00 FF F0
+</td>
+<td class="col1"> 12 bits
+</td>
+<td class="col2"> Block ID
+</td></tr>
+<tr class="row3">
+<td class="col0"> 00 FF 00 00
+</td>
+<td class="col1"> 8 bits
+</td>
+<td class="col2"> Y co-ordinate
+</td></tr>
+<tr class="row4">
+<td class="col0"> 0F 00 00 00
+</td>
+<td class="col1"> 4 bits
+</td>
+<td class="col2"> Z co-ordinate, relative to chunk
+</td></tr>
+<tr class="row5">
+<td class="col0"> F0 00 00 00
+</td>
+<td class="col1"> 4 bits
+</td>
+<td class="col2"> X co-ordinate, relative to chunk
+</td></tr></table>
+<p><br />
+</p><p><span id="0x35"></span>
+</p>
+<h3> <span class="mw-headline" id="Block_Change_.280x35.29"> Block Change (0x35) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x35
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>502</code>
+</td>
+<td class="col4"> Block X Coordinate
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>71</code>
+</td>
+<td class="col3"> Block Y Coordinate
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>18</code>
+</td>
+<td class="col3"> Block Z Coordinate
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Block Type
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>78</code>
+</td>
+<td class="col3"> The new block type for the block
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Block Metadata
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> The new Metadata for the block
+</td></tr>
+<tr class="row6">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 13 bytes
+</td></tr></table>
+<p><br />
+<span id="0x36"></span>
+</p>
+<h3> <span class="mw-headline" id="Block_Action_.280x36.29"> Block Action (0x36) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet is used for a number of things:
+</p>
+<ul><li> <div class="li">Chests opening and closing
+</li><li> Pistons pushing and pulling
+</li><li> Note blocks playing
+</li></ul>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x36
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> <code>502</code>
+</td>
+<td class="col4"> Block X Coordinate
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>71</code>
+</td>
+<td class="col3"> Block Y Coordinate
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> <code>18</code>
+</td>
+<td class="col3"> Block Z Coordinate
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Byte 1
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>3</code>
+</td>
+<td class="col3"> Varies depending on block - see below
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Byte 2
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>17</code>
+</td>
+<td class="col3"> Varies depending on block - see below
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Block ID
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>29</code>
+</td>
+<td class="col3"> The block id this action is set for
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 15 bytes
+</td></tr></table>
+<p>See Also: <a href="/Block_Actions" title="Block Actions">Block Actions</a> 
+</p><p><br />
+<span id="0x37"></span>
+</p>
+<h3> <span class="mw-headline" id="Block_Break_Animation_.280x37.29"> Block Break Animation (0x37) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x37
+</td>
+<td class="col1 centeralign"> EID?
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> Entity breaking the block?
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3" rowspan="3"> Block position
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Destroy Stage
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 1
+</td>
+<td class="col3"> How far destroyed this block is.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 18 bytes
+</td></tr></table>
+<p><br />
+<span id="0x38"></span>
+</p>
+<h3> <span class="mw-headline" id="Map_Chunk_Bulk_.280x38.29"> Map Chunk Bulk (0x38) </span></h3>
+<p><i>Server to Client</i>
+</p><p>To reduce the number of bytes this packet is used to send chunks together for better compression results. The packet contains up to 100 chunks (later this might be reduced to 50).
+</p><p>The data part is a zlib compressed byte array containing the chunk data. The meta data part specifies which chunks in which order the data part exists of. 
+</p><p>To split this packet into chunks you need to uncompress the data array. Then you can iterate through the data part. Each part is 10240 * n + 256 bytes. n is the number of sections in the current chunk (this is the number of flags set in the primary bitmap). 10240 is the amount of bytes for each chunk without add bitmap, 256 bytes are used for biomes. The second short in the meta data part is not yet in use. It could specify if the chunk uses the add bitmap part, because it has very high block ids, but not in the current snapshot. 
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x38
+</td>
+<td class="col1 centeralign"> Chunk Count
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> The number of chunks in this packet
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Chunk data length
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> the size of the data field
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Data
+</td>
+<td class="col1 centeralign"> byte array
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Compressed chunk data
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> meta information
+</td>
+<td class="col1 centeralign"> chunk bulk meta information
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3 centeralign"> Chunk count times the Meta information structure (See notes for details)
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 7 + (Chunk data size) + 12 * (Chunk Count) bytes
+</td></tr></table>
+<p><br />
+</p>
+<h4> <span class="mw-headline" id="Chunk_Bulk_Meta_Information_Structure">Chunk Bulk Meta Information Structure</span></h4>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col1 centeralign"> Chunk X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 10
+</td>
+<td class="col4"> The X coordinate of the specific chunk
+</td></tr>
+<tr class="row2">
+<td class="col1 centeralign"> Chunk Z
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 10
+</td>
+<td class="col4"> The Z coordinate of the specific chunk
+</td></tr>
+<tr class="row3">
+<td class="col1 centeralign"> Primary bitmap
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> 15
+</td>
+<td class="col4"> A bitmap which specifies which sections are not empty in this chunk
+</td></tr>
+<tr class="row4">
+<td class="col1 centeralign"> Add bitmap?
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> 0
+</td>
+<td class="col4"> A bitmap which specifies which sections need add information because of very high block ids. not yet used. needs verification
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="3"> 12 bytes
+</td></tr></table>
+<h3> <span class="mw-headline" id="Explosion_.280x3C.29"> Explosion (0x3C) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent when an explosion occurs (creepers, TNT, and ghast fireballs).
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="9"> 0x3C
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> double
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> double
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Radius
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> 3.0
+</td>
+<td class="col3"> Currently unused in the client
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Record count
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> This is the count, not the size. The size is 3 times this value.
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Records
+</td>
+<td class="col1 centeralign"> (byte, byte, byte) × count
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Each record is 3 signed bytes long, each bytes are the XYZ (respectively) offsets of affected blocks.
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Player Motion X
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> X velocity of the player being pushed by the explosion
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Player Motion Y
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Y velocity of the player being pushed by the explosion
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Player Motion Z
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Z velocity of the player being pushed by the explosion
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 45 bytes + 3*(Record count) bytes
+</td></tr></table>
+<p>Each block in Records is set to air. Coordinates for each axis in record is int(X) + record.x
+</p><p><br />
+<span id="0x3D"></span>
+</p>
+<h3> <span class="mw-headline" id="Sound_Or_Particle_Effect_.280x3D.29"> Sound Or Particle Effect (0x3D) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent when a client is to play a sound or particle effect.
+</p><p>By default, the minecraft client adjusts the volume of sound effects based on distance. The final boolean field is used to disable this, and instead the effect is played from 2 blocks away in the correct direction. Currently this is only used for effect 1013 (mob.wither.spawn), and is ignored for any other value by the client.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x3D
+</td>
+<td class="col1 centeralign"> Effect ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 1003
+</td>
+<td class="col4"> The ID of the effect, see below.
+</td></tr>
+<tr class="row1">
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> The X location of the effect.
+</td></tr>
+<tr class="row1">
+<td class="col1 centeralign"> Y
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> The Y location of the effect.
+</td></tr>
+<tr class="row1">
+<td class="col1 centeralign"> Z
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4"> The Z location of the effect.
+</td></tr>
+<tr class="row2">
+<td class="col1 centeralign"> Data
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 0
+</td>
+<td class="col4"> Extra data for certain effects, see below.
+</td></tr>
+<tr class="row4">
+<td class="col1 centeralign"> No Volume Decrease
+</td>
+<td class="col2 centeralign"> boolean
+</td>
+<td class="col3 centeralign"> false
+</td>
+<td class="col4 centeralign"> See above
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 19 bytes
+</td></tr></table>
+<h4> <span class="mw-headline" id="Effects">Effects</span></h4>
+<p><b>Sound</b>:
+</p>
+<ul><li>1000: <code>random.click</code>
+</li><li>1001: <code>random.click</code>
+</li><li>1002: <code>random.bow</code>
+</li><li>1003: <code>random.door_open</code> or <code>random.door_close</code> (50/50 chance)
+</li><li>1004: <code>random.fizz</code>
+</li><li>1005: Play a music disc. <b>Data</b>: <a rel="nofollow" class="external text" href="http://www.minecraftwiki.net/wiki/Music_Discs">Record ID</a>
+</li><li><i>(1006 not assigned)</i>
+</li><li>1007: <code>mob.ghast.charge</code>
+</li><li>1008: <code>mob.ghast.fireball</code>
+</li><li><i>(1009 not assigned)</i>
+</li><li>1010: <code>mob.zombie.wood</code>
+</li><li>1011: <code>mob.zombie.metal</code>
+</li><li>1012: <code>mob.zombie.woodbreak</code>
+</li><li>1013: <code>mob.wither.spawn</code>
+</li></ul>
+<p><b>Particle</b>:
+</p>
+<ul><li>2000: Spawns 10 smoke particles, e.g. from a fire. <b>Data</b>: direction, see below
+</li><li>2001: Block break. <b>Data</b>: <a rel="nofollow" class="external text" href="http://www.minecraftwiki.net/wiki/Data_values">Block ID</a>
+</li><li>2002: Splash potion. Particle effect + glass break sound. <b>Data</b>: <a rel="nofollow" class="external text" href="http://www.lb-stuff.com/Minecraft/PotionDataValues1.9pre3.txt">Potion ID</a>
+</li><li>2003: Eye of ender. Actual client effect to be determined.
+</li><li>2004: Mob spawn particle effect: smoke + flames
+</li></ul>
+<p>Smoke directions:
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> ID
+</td>
+<td class="col1"> Direction
+</td></tr>
+<tr class="row1">
+<td class="col0"> 0
+</td>
+<td class="col1"> South - East
+</td></tr>
+<tr class="row2">
+<td class="col0"> 1
+</td>
+<td class="col1"> South
+</td></tr>
+<tr class="row3">
+<td class="col0"> 2
+</td>
+<td class="col1"> South - West
+</td></tr>
+<tr class="row4">
+<td class="col0"> 3
+</td>
+<td class="col1"> East
+</td></tr>
+<tr class="row5">
+<td class="col0"> 4
+</td>
+<td class="col1"> (Up or middle&#160;?)
+</td></tr>
+<tr class="row6">
+<td class="col0"> 5
+</td>
+<td class="col1"> West
+</td></tr>
+<tr class="row7">
+<td class="col0"> 6
+</td>
+<td class="col1"> North - East
+</td></tr>
+<tr class="row8">
+<td class="col0"> 7
+</td>
+<td class="col1"> North
+</td></tr>
+<tr class="row9">
+<td class="col0"> 8
+</td>
+<td class="col1"> North - West
+</td></tr></table>
+<p><br />
+<span id="0x3E"></span>
+</p>
+<h3> <span class="mw-headline" id="Named_Sound_Effect_.280x3E.29"> Named Sound Effect (0x3E) </span></h3>
+<p><i>Server to client</i>
+</p><p>Used to play a sound effect on the client.
+</p><p>All known sound effect names can be seen <a rel="nofollow" class="external text" href="https://github.com/SirCmpwn/Craft.Net/blob/master/Craft.Net.Data/SoundEffect.cs">here</a>.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x3E
+</td>
+<td class="col1 centeralign"> Sound name
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign"> step.grass
+</td>
+<td class="col4 centeralign"> 250
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Effect position X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 250
+</td>
+<td class="col3 centeralign"> effect X multiplied by 8
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Effect position Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 250
+</td>
+<td class="col3 centeralign"> effect Y multiplied by 8
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Effect position Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 250
+</td>
+<td class="col3 centeralign"> effect Z multiplied by 8
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Volume
+</td>
+<td class="col1 centeralign"> float
+</td>
+<td class="col2 centeralign"> 9
+</td>
+<td class="col3 centeralign"> 1 is 100%, can be more
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Pitch
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 1
+</td>
+<td class="col3 centeralign"> 63 is 100%, can be more
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 20 bytes + length of string
+</td></tr></table>
+<p><br />
+<span id="0x46"></span>
+</p>
+<h3> <span class="mw-headline" id="Change_Game_State_.280x46.29"> Change Game State (0x46) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This packet appeared with protocol version 10. Currently, it appears when a bed can't be used as a spawn point and when the rain state changes.  it could have additional uses in the future.
+</p><p>The class has an array of strings linked to reason codes 0, 1, 2, and 3 but only the codes for 1 and 2 are null.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x46
+</td>
+<td class="col1 centeralign"> Reason
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 0
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Game mode
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3"> Used only when reason = 3. 0 is survival, 1 is creative.
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes
+</td></tr></table>
+<p><b>Reason codes</b>
+</p>
+<table class="wikitable">
+
+<tr>
+<th> Code
+</th>
+<th> Effect
+</th>
+<th> Text
+</th></tr>
+<tr>
+<td> 0
+</td>
+<td> Invalid Bed
+</td>
+<td> "tile.bed.notValid"
+</td></tr>
+<tr>
+<td> 1
+</td>
+<td> Begin raining
+</td>
+<td> null
+</td></tr>
+<tr>
+<td> 2
+</td>
+<td> End raining
+</td>
+<td> null
+</td></tr>
+<tr>
+<td> 3
+</td>
+<td> Change game mode
+</td>
+<td> gameMode.changed
+</td></tr>
+<tr>
+<td> 4
+</td>
+<td> Enter credits
+</td>
+<td>
+</td></tr></table>
+<p><br />
+</p><p><span id="0x47"></span>
+</p>
+<h3> <span class="mw-headline" id="Global_Entity_.280x47.29"> Global Entity (0x47) </span></h3>
+<p><i>Server to Client</i>
+</p><p>With this packet, the server notifies the client of thunderbolts striking within a 512 block radius around the player. The coordinates specify where exactly the thunderbolt strikes.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0x47
+</td>
+<td class="col1 centeralign"> Entity ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 4
+</td>
+<td class="col4"> The entity ID of the thunderbolt
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> ID
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 1
+</td>
+<td class="col3"> The global entity, currently always 1 for thunderbolt.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> X
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 133
+</td>
+<td class="col3"> Thunderbolt X as Absolute Integer
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 913
+</td>
+<td class="col3"> Thunderbolt Y as Absolute Integer
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> 63552
+</td>
+<td class="col3"> Thunderbolt Z as Absolute Integer
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 18 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x64"></span>
+</p>
+<h3> <span class="mw-headline" id="Open_Window_.280x64.29"> Open Window (0x64) </span></h3>
+<p><i>Server to Client</i>
+</p><p>This is sent to the client when it should open an inventory, such as a chest, workbench, or furnace. This message is not sent anywhere for clients opening their own inventory.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0x64
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 123
+</td>
+<td class="col4"> A unique id number for the window to be displayed.  Notchian server implementation is a counter, starting at 1.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Inventory Type
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 2
+</td>
+<td class="col3"> The window type to use for display.  Check below
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Window title
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>Chest</code>
+</td>
+<td class="col3"> The title of the window.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Number of Slots
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 3
+</td>
+<td class="col3"> Number of slots in the window (excluding the number of slots in the player inventory).
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes + length of string
+</td></tr></table>
+<p>The window titles sent by the Notchian server are "Chest", "Large chest", "Crafting", "Furnace", and "Trap". Notchian clients force window titles for some windows, like dispensers and furnaces, but other titles are customizable. However, the window title sent by the server is always used for chests. See <a href="/Inventory#Windows" title="Inventory">inventory windows</a> for further information.
+</p><p><br />
+</p><p><span id="0x65"></span>
+</p>
+<h3> <span class="mw-headline" id="Close_Window_.280x65.29"> Close Window (0x65) </span></h3>
+<p><i>Two-Way</i>
+</p><p>This packet is sent by the client when closing a window. This packet is sent from the server to the client when a window is forcibly closed, such as when a chest is destroyed while it's open.
+</p><p>Note, notchian clients send a close window message with window id 0 to close their inventory even though there is never an Open Window message for inventory. 
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0x65
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 0
+</td>
+<td class="col4"> This is the id of the window that was closed. 0 for inventory.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 2 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x66"></span>
+</p>
+<h3> <span class="mw-headline" id="Click_Window_.280x66.29"> Click Window (0x66) </span></h3>
+<p><i>Client to Server</i>
+</p><p>This packet is sent by the player when it clicks on a slot in a window.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x66
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>0</code>
+</td>
+<td class="col4"> The id of the window which was clicked. 0 for player inventory.
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Slot
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>36</code>
+</td>
+<td class="col3"> The clicked slot. See below.
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Mouse button
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> <code>1</code>
+</td>
+<td class="col3"> 0: left click, 1: right click, 3: middle click ("shift" is set to 2 in this case)
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Action number
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>12</code>
+</td>
+<td class="col3"> A unique number for the action, used for transaction handling (See the Transaction packet).
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Shift
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> This is true if the user was holding keyboard shift when they clicked.
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> Clicked item
+</td>
+<td class="col1 centeralign"> <a href="/Slot_Data" title="Slot Data">slot</a>
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 8 bytes + slot data
+</td></tr></table>
+<p>See <a href="/Inventory#Windows" title="Inventory">inventory windows</a> for further information about how slots are indexed.
+</p><p>When right-clicking on a stack of items, half the stack will be picked up and half left in the slot.  If the stack is an odd number, the half left in the slot will be smaller of the amounts.
+</p><p>The Action number is actually a counter, starting at 1.  This number is used by the server as a transaction ID to send back a <a href="#0x6A">Transaction packet</a>.
+</p><p><br />
+</p><p><span id="0x67"></span>
+</p>
+<h3> <span class="mw-headline" id="Set_Slot_.280x67.29"> Set Slot (0x67) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the server when an item in a slot (in a window) is added/removed.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x67
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>0</code>
+</td>
+<td class="col4"> The window which is being updated. 0 for player inventory. Note that all known window types include the player inventory. This packet will only be sent for the currently opened window while the player is performing actions, even if it affects the player inventory. After the window is closed, a number of these packets are sent to update the player's inventory window (0).
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Slot
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>36</code>
+</td>
+<td class="col3"> The slot that should be updated
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Slot data
+</td>
+<td class="col1 centeralign"> <a href="/Slot_Data" title="Slot Data">slot</a>
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 4 bytes + slot data
+</td></tr></table>
+<p>Note that if window ID and slot are both -1, it means the item currently attached to the cursor.
+</p><p>See <a href="/Inventory#Windows" title="Inventory">inventory windows</a> for further information about how slots are indexed.
+</p><p>Slots: <a rel="nofollow" class="external autonumber" href="http://gyazo.com/9d52e1fd4dc14790ec66eab4a9aee00e.png">[1]</a>
+</p><p><br />
+</p><p><span id="0x68"></span>
+</p>
+<h3> <span class="mw-headline" id="Set_Window_Items_.280x68.29"> Set Window Items (0x68) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="/File:Inventory-slots.png" class="image"><img alt="" src="/wiki/images/thumb/1/13/Inventory-slots.png/180px-Inventory-slots.png" width="180" height="170" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="/File:Inventory-slots.png" class="internal" title="Enlarge"><img src="/wiki/skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div>The inventory slots</div></div></div>
+<p>Sent by the server when an item in a slot (in a window) is added/removed. This includes the main inventory, equipped armour and crafting slots. 
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x68
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>1</code>
+</td>
+<td class="col4"> The id of window which items are being sent for. 0 for player inventory.
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Count
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>4</code>
+</td>
+<td class="col3"> The number of slots (see below)
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Slot data
+</td>
+<td class="col1 centeralign"> array of <a href="/Slot_Data" title="Slot Data">slots</a>
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row4">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 4 bytes + size of slot data array
+</td></tr></table>
+<p>See <a href="/Inventory#Windows" title="Inventory">inventory windows</a> for further information about how slots are indexed.
+</p><p><br />
+</p><p><span id="0x69"></span>
+</p>
+<h3> <span class="mw-headline" id="Update_Window_Property_.280x69.29"> Update Window Property (0x69) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x69
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 2
+</td>
+<td class="col4"> The id of the window.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Property
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 1
+</td>
+<td class="col3"> Which property should be updated.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Value
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 650
+</td>
+<td class="col3"> The new value for the property.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<p><b>Furnace</b>
+</p><p>Properties:
+</p>
+<ul><li> 0: Progress arrow
+</li><li> 1: Fire icon (fuel)
+</li></ul>
+<p>Values:
+</p>
+<ul><li> 0-180 for progress arrow
+</li><li> 0-250 for fuel indicator
+</li></ul>
+<p>Ranges are presumably in in-game ticks
+</p><p><b>Enchantment Table</b>
+</p><p>Properties: 0, 1 or 2 depending on the "enchantment slot" being given.
+</p><p>Values: The enchantment's level.
+</p><p><br />
+</p><p><span id="0x6A"></span>
+</p>
+<h3> <span class="mw-headline" id="Confirm_Transaction_.280x6A.29"> Confirm Transaction (0x6A) </span></h3>
+<p><i>Two-Way</i>
+</p><p>A packet from the server indicating whether a request from the client was accepted, or whether there was a conflict (due to lag). This packet is also sent from the client to the server in response to a server transaction rejection packet.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0x6A
+</td>
+<td class="col1 centeralign"> Window id
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 0
+</td>
+<td class="col4"> The id of the window that the action occurred in.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Action number
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 12
+</td>
+<td class="col3"> Every action that is to be accepted has a unique number. This field corresponds to that number.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Accepted?
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> true
+</td>
+<td class="col3"> Whether the action was accepted.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 5 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x6B"></span>
+</p>
+<h3> <span class="mw-headline" id="Creative_Inventory_Action_.280x6B.29"> Creative Inventory Action (0x6B) </span></h3>
+<p><i>Two-Way</i>
+</p><p>While the user is in the standard inventory (i.e., not a crafting bench) on a creative-mode server then the server will send this packet:
+</p>
+<ul><li> <div class="li"> If an item is dropped into the quick bar</div>
+</li><li> If an item is picked up from the quick bar (item id is -1)
+</li></ul>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x6B
+</td>
+<td class="col1 centeralign"> Slot
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> 36
+</td>
+<td class="col4"> Inventory slot
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Clicked item
+</td>
+<td class="col1 centeralign"> <a href="/Slot_Data" title="Slot Data">slot</a>
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes + slot data
+</td></tr></table>
+<p><br />
+</p><p><span id="0x6C"></span>
+</p>
+<h3> <span class="mw-headline" id="Enchant_Item_.280x6C.29"> Enchant Item (0x6C) </span></h3>
+<p><i>Client to Server</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x6C
+</td>
+<td class="col1 centeralign"> Window ID
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 1
+</td>
+<td class="col4"> The ID sent by <a href="#0x64">Open Window</a>
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Enchantment
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3"> The position of the enchantment on the enchantment table window, starting with 0 as the topmost one.
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0x82"></span>
+</p>
+<h3> <span class="mw-headline" id="Update_Sign_.280x82.29"> Update Sign (0x82) </span></h3>
+<p><i>Two-Way</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="7"> 0x82
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 128
+</td>
+<td class="col4"> Block X Coordinate
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3"> Block Y Coordinate
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign"> -128
+</td>
+<td class="col3"> Block Z Coordinate
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Text1
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>First line</code>
+</td>
+<td class="col3"> First line of text in the sign
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Text2
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>Second line</code>
+</td>
+<td class="col3"> Second line of text in the sign
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Text3
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>Third line</code>
+</td>
+<td class="col3"> Third line of text in the sign
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Text4
+</td>
+<td class="col1 centeralign"> string
+</td>
+<td class="col2 centeralign"> <code>Fourth line</code>
+</td>
+<td class="col3"> Fourth line of text in the sign
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 11 bytes + 4 strings
+</td></tr></table>
+<p>This message is sent from the server to the client whenever a sign is discovered or created. This message is sent from the client to the server when the "Done" button is pushed after placing a sign. This message is NOT sent when a sign is destroyed or unloaded.
+</p><p><br />
+</p><p><span id="0x83"></span>
+</p>
+<h3> <span class="mw-headline" id="Item_Data_.280x83.29"> Item Data (0x83) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent to specify complex data on an item; currently used only for maps.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0x83
+</td>
+<td class="col1 centeralign"> Item Type
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign"> <code>358</code>
+</td>
+<td class="col4"> Type of item being modified
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Item ID
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> <code>0</code>
+</td>
+<td class="col3"> The ID (damage value) of the item being modified
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Text length
+</td>
+<td class="col1 centeralign"> unsigned byte
+</td>
+<td class="col2 centeralign"> <code>35</code>
+</td>
+<td class="col3"> Length of following byte array
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Text
+</td>
+<td class="col1 centeralign"> byte array
+</td>
+<td class="col2 centeralign"> {0,0,0,20,20,20,20,20}
+</td>
+<td class="col3"> ASCII text.
+</td></tr>
+<tr class="row9">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes + Text length
+</td></tr></table>
+<p><b>Maps</b>
+If the first byte of the text is 0, the next two bytes are X start and Y start and the rest of the bytes are the colors in that column.
+</p><p>If the first byte of the text is 1, the rest of the bytes are in groups of three: (data, x, y). The lower half of the data is the type (always 0 under vanilla) and the upper half is the direction.
+</p><p><br />
+</p><p><span id="0x84"></span>
+</p>
+<h3> <span class="mw-headline" id="Update_Tile_Entity_.280x84.29"> Update Tile Entity (0x84) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Essentially a block update on a tile entity.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="6"> 0x84
+</td>
+<td class="col1 centeralign"> X
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Y
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Z
+</td>
+<td class="col1 centeralign"> int
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Action
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> The type of update to perform
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Data length
+</td>
+<td class="col1 centeralign"> Short
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Varies
+</td></tr>
+<tr class="row6">
+<td class="col0 centeralign"> NBT Data
+</td>
+<td class="col1 centeralign"> Byte Array - Present if data length &gt; 0
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Compressed with <a href="http://en.wikipedia.org/wiki/Gzip" class="extiw" title="wikipedia:Gzip">gzip</a>. Varies
+</td></tr>
+<tr class="row7">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 12 + itemstack bytes
+</td></tr></table>
+<p><b>Actions</b>
+</p>
+<ul><li> <b>1</b>: Set mob displayed inside a mob spawner. Custom 1 contains the <a href="/Entities#Mobs" title="Entities">mob type</a>
+</li></ul>
+<p><br />
+</p><p><span id="0xC8"></span>
+</p>
+<h3> <span class="mw-headline" id="Increment_Statistic_.280xC8.29"> Increment Statistic (0xC8) </span></h3>
+<p><i>Server to Client</i>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0xC8
+</td>
+<td class="col1 centeralign"> Statistic ID
+</td>
+<td class="col2 centeralign"> int
+</td>
+<td class="col3 centeralign"> 1003
+</td>
+<td class="col4"> The ID of the statistic. See <a rel="nofollow" class="external text" href="http://www.minecraftforum.net/viewtopic.php?f=1020&amp;t=295360">List of statistics</a>.
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> Amount
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 1
+</td>
+<td class="col3"> The amount to increment the statistic.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0xC9"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_List_Item_.280xC9.29"> Player List Item (0xC9) </span></h3>
+<p><i>Server to Client</i>
+</p><p>Sent by the notchian server to update the user list (&lt;tab&gt; in the client). The server sends one packet per user per tick, amounting to 20 packets/s for 1 online user, 40 for 2, and so forth.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0xC9
+</td>
+<td class="col1 centeralign"> Player name
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign"> barneygale
+</td>
+<td class="col4"> Supports chat colouring, limited to 16 characters.
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Online
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> true
+</td>
+<td class="col3"> If false, the client will remove the user from the list.
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Ping
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign"> 193
+</td>
+<td class="col3"> Ping, presumably in ms.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 6 bytes + length of string
+</td></tr></table>
+<p><br />
+</p><p><span id="0xCA"></span>
+</p>
+<h3> <span class="mw-headline" id="Player_Abilities_.280xCA.29"> Player Abilities (0xCA) </span></h3>
+<p><i>Two-Way</i>
+</p><p>The latter 2 bytes are used to indicate the walking and flying sppeds respectively, while the first byte is used to determine the value of 4 booleans.
+</p><p>These booleans are whether damage is disabled (god mode), whether the player is flying, whether the player can fly, and whether the player is in creative mode.
+</p><p>To get the values of these booleans, simply AND (&amp;) the byte with 1,2,4 and 8 respectively, to get the 0 or 1 bitwise value. To set them OR (|) them with their repspective masks.
+The vanilla client sends this packet when the player starts/stops flying with the second parameter changed accordingly. All other parameters are ignored by the vanilla server.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0xCA
+</td>
+<td class="col1 centeralign"> Flags
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 5
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Flying speed
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 12
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Walking speed
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 25
+</td>
+<td class="col3">
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 4 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0xCB"></span>
+</p>
+<h3> <span class="mw-headline" id="Tab-complete_.280xCB.29"> Tab-complete (0xCB) </span></h3>
+<p><i>Two-way</i>
+</p><p>Sent C-&gt;S when the user presses [tab] while writing text. The payload contains all text behind the cursor.
+</p><p>The server responds with an auto-completion of the last word sent to it. In the case of regular chat, this is a player username. Command names and parameters are also supported.
+</p><p>In the event of more than one possible completion, the server responds with the options packed into the single string field, separated by a null character. Note that as strings are UTF-16, this is two bytes wide.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0xCB
+</td>
+<td class="col1 centeralign"> Text
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4">
+</td></tr>
+<tr class="row3">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes + length of string
+</td></tr></table>
+<p><br />
+<span id="0xCC"></span>
+</p>
+<h3> <span class="mw-headline" id="Client_Settings_.280xCC.29"> Client Settings (0xCC) </span></h3>
+<p><i>Client to server</i>
+</p><p>Sent when the player connects, or when settings are changed.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0xCC
+</td>
+<td class="col1 centeralign"> Locale
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign"> en_GB
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> View distance
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3"> 0-3 for 'far', 'normal', 'short', 'tiny'.
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Chat flags
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 8
+</td>
+<td class="col3"> Chat settings. See notes below.
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Difficulty
+</td>
+<td class="col1 centeralign"> byte
+</td>
+<td class="col2 centeralign"> 0
+</td>
+<td class="col3 centeralign"> Client-side difficulty from options.txt
+</td></tr>
+<tr class="row5">
+<td class="col0 centeralign"> Show Cape
+</td>
+<td class="col1 centeralign"> boolean
+</td>
+<td class="col2 centeralign"> true
+</td>
+<td class="col3 centeralign"> Client-side "show cape" option
+</td></tr>
+<tr class="row6">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 7 bytes + length of string
+</td></tr></table>
+<p>Chat flags has several values packed into one byte.
+</p><p><b>Chat Enabled:</b> Bits 0-1. 00: Enabled.  01: Commands only.  10: Hidden.
+</p><p><b>Colors Enabled:</b> Bit 3.  0: Disabled.  1: Enabled.
+</p><p><br />
+<span id="0xCD"></span>
+</p>
+<h3> <span class="mw-headline" id="Client_Statuses_.280xCD.29"> Client Statuses (0xCD) </span></h3>
+<p><i>Client to server</i>
+</p><p>Sent when the client is ready to complete login and when the client is ready to respawn after death.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="1"> 0xCD
+</td>
+<td class="col1 centeralign"> Payload
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> 0
+</td>
+<td class="col4"> Bit field. 0: Initial spawn, 1: Respawn after death
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="5"> 2 bytes
+</td></tr></table>
+<p><br />
+<span id="0xFA"></span>
+</p>
+<h3> <span class="mw-headline" id="Plugin_Message_.280xFA.29"> Plugin Message (0xFA) </span></h3>
+<p><i>Two-Way</i>
+</p><p>Mods and plugins can use this to send their data. As of 1.3, Minecraft itself uses a number of <a href="/Plugin_channel" title="Plugin channel">plugin channels</a>. These internal channels are prefixed with <code>MC|</code>.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="3"> 0xFA
+</td>
+<td class="col1 centeralign"> Channel
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign"> MyMod:testchannel
+</td>
+<td class="col4"> Name of the "channel" used to send the data.
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> length
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Length of the following byte array
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> data
+</td>
+<td class="col1 centeralign"> byte array
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3"> Any data.
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 5 bytes + length of string + length of byte array
+</td></tr></table>
+<p>More documentation on this: <a rel="nofollow" class="external free" href="http://dinnerbone.com/blog/2012/01/13/minecraft-plugin-channels-messaging/">http://dinnerbone.com/blog/2012/01/13/minecraft-plugin-channels-messaging/</a>
+</p><p><br />
+</p><p><span id="0xFC"></span>
+</p>
+<h3> <span class="mw-headline" id="Encryption_Key_Response_.280xFC.29"> Encryption Key Response (0xFC) </span></h3>
+<p><i>Two-Way</i>
+</p><p>See <a href="/Protocol_Encryption" title="Protocol Encryption">Protocol Encryption</a> for information on this packet. Bypassing the encryption is possible, authentication for the player name is still needed if the server is in online mode, but instead of sending this packet, you send <a href="#0xCD">Client Statuses</a> instead.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="4"> 0xFC
+</td>
+<td class="col1 centeralign"> Shared secret length
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4 centeralign">
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Shared secret
+</td>
+<td class="col1 centeralign"> byte array
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3 centeralign">
+</td></tr>
+<tr class="row3">
+<td class="col0 centeralign"> Verify token length
+</td>
+<td class="col1 centeralign"> short
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3 centeralign">
+</td></tr>
+<tr class="row4">
+<td class="col0 centeralign"> Verify token response
+</td>
+<td class="col1 centeralign"> byte array
+</td>
+<td class="col2 centeralign">
+</td>
+<td class="col3 centeralign">
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 5 bytes + length of shared secret + length of token
+</td></tr></table>
+<p><br />
+<span id="0xFD"></span>
+</p>
+<h3> <span class="mw-headline" id="Encryption_Key_Request_.280xFD.29"> Encryption Key Request (0xFD) </span></h3>
+<p><i>Server to client</i>
+</p><p>See <a href="/Protocol_Encryption" title="Protocol Encryption">Protocol Encryption</a> for information on this packet.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="5"> 0xFD
+</td>
+<td class="col1 centeralign"> Server id
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4 centeralign">
+</td></tr>
+<tr class="row2">
+<td class="col1 centeralign"> Public key length
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4 centeralign">
+</td></tr>
+<tr class="row3">
+<td class="col1 centeralign"> Public key
+</td>
+<td class="col2 centeralign"> byte array
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4 centeralign">
+</td></tr>
+<tr class="row4">
+<td class="col1 centeralign"> Verify token length
+</td>
+<td class="col2 centeralign"> short
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4 centeralign">
+</td></tr>
+<tr class="row4">
+<td class="col1 centeralign"> Verify token
+</td>
+<td class="col2 centeralign"> byte array
+</td>
+<td class="col3 centeralign">
+</td>
+<td class="col4 centeralign">
+</td></tr>
+<tr class="row5">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 7 bytes + length of string + length of key + length of token
+</td></tr></table>
+<p><br />
+<span id="0xFE"></span>
+</p>
+<h3> <span class="mw-headline" id="Server_List_Ping_.280xFE.29"> Server List Ping (0xFE) </span></h3>
+<p><i>Client to Server</i>
+</p><p>This packet is used by the multiplayer menu to retrieve MOTD, version, and player counts. For more info see <a href="/Server_List_Ping" title="Server List Ping">Server List Ping</a>
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="1"> 0xFE
+</td>
+<td class="col1 centeralign"> Magic
+</td>
+<td class="col2 centeralign"> byte
+</td>
+<td class="col3 centeralign"> <code>1</code>
+</td>
+<td class="col4 centeralign"> always <code>1</code>
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 2 bytes
+</td></tr></table>
+<p><br />
+</p><p><span id="0xFF"></span>
+</p>
+<h3> <span class="mw-headline" id="Disconnect.2FKick_.280xFF.29"> Disconnect/Kick (0xFF) </span></h3>
+<p><i>Two-Way</i>
+</p><p>Sent by the server before it disconnects a client, or by the client before it disconnects from the server. The receiver of this packet assumes that the sender has already closed the connection by the time the packet arrives.
+</p><p>Due to race conditions in the client, a local server may need to pause for a short period after sending this packet before closing the connection. An alternative is simply not to close the connection, and wait for the client to do so on receipt of this packet.
+</p>
+<table class="wikitable">
+
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0xFF
+</td>
+<td class="col1 centeralign"> Reason
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign"> <code>The server is full!</code>
+</td>
+<td class="col4"> Displayed to the client when the connection terminates
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes + length of strings
+</td></tr></table>
+<h2> <span class="mw-headline" id="See_Also"> See Also </span></h2>
+<ul><li> <a href="/Protocol_History" title="Protocol History">Protocol History</a>
+</li><li> <a href="/Data_Types" title="Data Types">Data Types</a>
+</li><li> <a href="/Units_of_Measurement" title="Units of Measurement">Units of Measurement</a></div>
+</li></ul>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 862/1000000
+Post-expand include size: 1824/2097152 bytes
+Template argument size: 304/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key minecraft-wiki_:pcache:idhash:11-0!*!0!!en!2!* and timestamp 20121110205424 -->
+</div>				<!-- /bodycontent -->
+								<!-- printfooter -->
+				<div class="printfooter">
+				Retrieved from "<a href="http://www.wiki.vg/wiki/index.php?title=Protocol&amp;oldid=3128">http://www.wiki.vg/wiki/index.php?title=Protocol&amp;oldid=3128</a>"				</div>
+				<!-- /printfooter -->
+												<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/Category:Protocol_Details" title="Category:Protocol Details">Protocol Details</a></li><li><a href="/Category:Minecraft_Modern" title="Category:Minecraft Modern">Minecraft Modern</a></li></ul></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+				<!-- debughtml -->
+								<!-- /debughtml -->
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Personal tools</h5>
+	<ul>
+		<li id="pt-login"><a href="/wiki/index.php?title=Special:UserLogin&amp;returnto=Protocol" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in / create account</a></li>
+	</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Namespaces</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href="/Protocol"  title="View the content page [c]" accesskey="c">Page</a></span></li>
+					<li  id="ca-talk"><span><a href="/Talk:Protocol"  title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+	<h4>
+		</h4>
+	<h5><span>Variants</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Views</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="/Protocol" >Read</a></span></li>
+					<li id="ca-viewsource"><span><a href="/wiki/index.php?title=Protocol&amp;action=edit"  title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li>
+					<li id="ca-history" class="collapsible"><span><a href="/wiki/index.php?title=Protocol&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Actions</span><a href="#"></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Search</label></h5>
+	<form action="/wiki/index.php" id="searchform">
+				<div>
+			<input type="search" name="search" title="Search MinecraftCoalition [f]" accesskey="f" id="searchInput" />			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchGoButton" class="searchButton" />			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton" />					<input type='hidden' name="title" value="Special:Search"/>
+		</div>
+	</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(/wiki/skins/../images/8/83/Logotemp.png);" href="/Main_Page"  title="Visit the main page"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Navigation</h5>
+	<div class="body">
+		<ul>
+			<li id="n-mainpage-description"><a href="/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li>
+			<li id="n-portal"><a href="/MinecraftCoalition:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+			<li id="n-currentevents"><a href="/MinecraftCoalition:Current_events" title="Find background information on current events">Current events</a></li>
+			<li id="n-recentchanges"><a href="/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li>
+			<li id="n-randompage"><a href="/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>
+			<li id="n-help"><a href="/Help:Contents" title="The place to find out">Help</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- TOOLBOX -->
+<div class="portal" id='p-tb'>
+	<h5>Toolbox</h5>
+	<div class="body">
+		<ul>
+			<li id="t-whatlinkshere"><a href="/Special:WhatLinksHere/Protocol" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li>
+			<li id="t-recentchangeslinked"><a href="/Special:RecentChangesLinked/Protocol" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
+			<li id="t-specialpages"><a href="/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
+			<li><a href="/wiki/index.php?title=Protocol&amp;printable=yes" rel="alternate">Printable version</a></li>
+			<li id="t-permalink"><a href="/wiki/index.php?title=Protocol&amp;oldid=3128" title="Permanent link to this revision of the page">Permanent link</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 29 October 2012, at 06:33.</li>
+											<li id="footer-info-viewcount">This page has been accessed 181,164 times.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/">Attribution-ShareAlike 3.0 Unported</a>.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="/MinecraftCoalition:Privacy_policy" title="MinecraftCoalition:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/MinecraftCoalition:About" title="MinecraftCoalition:About">About MinecraftCoalition</a></li>
+											<li id="footer-places-disclaimer"><a href="/MinecraftCoalition:General_disclaimer" title="MinecraftCoalition:General disclaimer">Disclaimers</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" alt="Attribution-ShareAlike 3.0 Unported" width="88" height="31" /></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script src="http://www.wiki.vg/wiki/load.php?debug=false&amp;lang=en&amp;modules=skins.vector&amp;only=scripts&amp;skin=vector&amp;*"></script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
+}</script>
+<!-- Served in 0.327 secs. -->
+	</body>
+</html>
