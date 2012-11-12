@@ -18,7 +18,7 @@ function erlang_gen_get_header(packet) {
 }
 
 function main() {
-    proto.require(DUMP_VERSION)
+    proto.require(DUMP_VERSION);
     proto.each_packet(erlang_gen_get_header);
 }
 

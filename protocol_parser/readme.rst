@@ -15,6 +15,27 @@ Usage:
 
 This command generate ``protocol.json`` with packets data.
 
+protocol.json format
+====================
+::
+
+    { 
+       'dump_version': '1.0',
+       'packets': [packet, packet, ...]
+    }
+    packet: {
+        fields: [field, field, ...],
+        id: 2,
+        name: 'Keep alive'
+    }
+    field: {
+        "name":"Keep-alive ID",
+        "type":"int",
+        "ex":"957759560",
+        "notes":"Server-generated random id"
+    }
+
+
 ***************
 Packet handlers
 ***************
@@ -39,7 +60,7 @@ This is template in node.js for custom packets handler:
      }
 
     function main() {
-         proto.require(DUMP_VERSION)
+         proto.require(DUMP_VERSION);
          proto.each_packet(my_handler);
     }
 
