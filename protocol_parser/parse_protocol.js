@@ -5,10 +5,11 @@ var path = require('path');
 var DUMP_VERSION = '1.0'
 
 var optimist = require('optimist')
-    .usage('Parse Minecraft Protocol from http://wiki.vg/Protocol page.\nUsage: $0 <protocol> -o <protocol.json>')
+    .usage('Parse Minecraft Protocol from http://wiki.vg/Protocol page.' +
+        '\nUsage: $0 <protocol> [-o <protocol.json>]' + 
+        '\n<protocol> may be filename or url.')
     .demand('o')
     .default('o', 'protocol.json')
-    .describe('', 'Protocol for parse, may be filename or url.')
     .describe('o', 'out to this file')
 
 
