@@ -1,3 +1,4 @@
+#!/usr/bin/node
 var fs = require('fs');
 var path = require('path');
 var erlang = require('./erlang_syntax.js');
