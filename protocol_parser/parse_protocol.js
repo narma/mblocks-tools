@@ -1,14 +1,22 @@
 var jsdom = require('jsdom');
+var fs = require('fs');
+var path = require('path');
 
-function parse(html, callback) {
+var DUMP_VERSION = '1.0'
+
+function parse(html, callback_packet, callback_packets) {
+    var jquery = fs.readFileSync("./jquery.js", 'utf-8');
     jsdom.env({
         html: html,
-        scripts: ["jquery.js"],
+        //scripts: [jquery],
+        src: [jquery],
         done: function(errors, window) {
             if(errors) {
                 console.error('Err: ', errors);
+                throw errors;
             }
-            var $ = window.$;
+            var $ = window.$ || window.jQuery;
+            var packets = [];
 
             $("div#bodyContent .wikitable").each(function() {
                 var table = $(this),
@@ -63,50 +71,61 @@ function parse(html, callback) {
                     index_tr += 1;
                     
                 });
-                callback(packet);
+                if(callback_packet) {
+                    callback_packet(packet);
+                } 
+                if(callback_packets) {
+                    packets.push(packet);
+                }
             });
+            if(callback_packets) callback_packets(packets);
         }
     });
 }
 
-function print_out(packet) {
-//    console.log(packet);
-    var id = packet['id'];
-    if(!id || id.substr(0, 2) != '0x' || parseInt(id.substr(2), 16) == NaN) {
-        console.error('Bad packet', packet);
-        return ;
+function write_out(out) {
+    return function(packets) {
+        process.stdout.write("\n"); // after last stdout write in each_packet
+        var data = {
+            'dump_version': DUMP_VERSION,
+            'packets': packets
+        };
+        var data_jsoned = JSON.stringify(data);
+        fs.writeFile(out, data_jsoned, function (err) {
+          if (err) throw err;          
+        });
     }
-    console.log(id, packet['name']);
-    for(var f in packet['fields']) {
-        var field = packet['fields'][f];
-        console.log(field['type'], '"' + field['name'] + '"');
-/*        if(!field['type'] || !field['name']) {
-            console.error('Bad field:', field);
-        }*/
-    }
-    console.log("\n");
-
 }
 
-function atomize(s) {
-    s = s.toLowerCase().replace(/\s/g, '_').replace(/\//g, '_');
-    s = (s.match(/[a-z_]/g) || []).join('');
-    s = s.trim();
-    if(!s) s = 'fixme_unknown';
-    return s;
-}
-function erlang_gen_get_header(packet) {
-    var id = packet['id'];
-    var fields = packet['fields'];
-    var packet_name = atomize(packet['name']);
+function main() {
+    var arguments = process.argv.splice(2);
 
-    var acc = [];
-    for(var f in fields) {
-        var field = fields[f];
-        var tt = atomize(field['type']);
-        acc.push(tt)
+    if(arguments.length < 1) {
+      var script_name = path.basename(process.argv[1]);
+
+      console.error("Usage: node " + script_name + " <file_or_url> [out=protocol.json]");
+      console.error("Examppe: node " + script_name + "http://www.wiki.vg/Protocol");
+      process.exit(1);
     }
-    console.log('get_header(' + id + ') -> {ok, ' + packet_name + ', [' + acc.join(', ') + ']};');
+
+    var html = arguments[0];
+    var out = 'protocol.json'
+    if(arguments.length > 1) {
+        out = arguments[1];
+    }
+
+    function each_packet() {
+        var counter = 0;
+        return function() {
+            counter += 1;
+            if(counter > 1) process.stdout.write("\r");
+            process.stdout.write("Parsed " + counter + " packets");
+        }
+    }
+
+    parse(html, each_packet(), write_out(out));
 }
 
-parse('Protocol', erlang_gen_get_header);
+if (require.main === module) {
+    main();
+}
