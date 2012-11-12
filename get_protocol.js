@@ -106,7 +106,7 @@ function erlang_gen_get_header(packet) {
         var tt = atomize(field['type']);
         acc.push(tt)
     }
-    console.log('get_header(' + id + ') -> {ok, ' + packet_name + ', [' + acc.join(', ') + ']}');
+    console.log('get_header(' + id + ') -> {ok, ' + packet_name + ', [' + acc.join(', ') + ']};');
 }
 
 parse('Protocol', erlang_gen_get_header);
