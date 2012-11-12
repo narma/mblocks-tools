@@ -1,10 +1,15 @@
 ===================================
 Parser tools for minecraft protocol
 ===================================
+Dependencies:
+
+* npm install ``jsdom``
+* npm install ``optimist``
 
 ******
 Parser
 ******
+
 First of all, parse Minecraft protocol with ``parse_protocol.js`` which parse http://wiki.vg/Protocol page.
 Usage:
  
