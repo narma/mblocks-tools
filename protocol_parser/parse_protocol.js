@@ -4,6 +4,14 @@ var path = require('path');
 
 var DUMP_VERSION = '1.0'
 
+var optimist = require('optimist')
+    .usage('Parse Minecraft Protocol from http://wiki.vg/Protocol page.\nUsage: $0 <protocol> -o <protocol.json>')
+    .demand('o')
+    .default('o', 'protocol.json')
+    .describe('', 'Protocol for parse, may be filename or url.')
+    .describe('o', 'out to this file')
+
+
 function parse(html, callback_packet, callback_packets) {
     var jquery = fs.readFileSync("./jquery.js", 'utf-8');
     jsdom.env({
@@ -98,21 +106,13 @@ function write_out(out) {
 }
 
 function main() {
-    var arguments = process.argv.splice(2);
 
-    if(arguments.length < 1) {
-      var script_name = path.basename(process.argv[1]);
-
-      console.error("Usage: node " + script_name + " <file_or_url> [out=protocol.json]");
-      console.error("Examppe: node " + script_name + "http://www.wiki.vg/Protocol");
-      process.exit(1);
+    var html = optimist.argv._[0];
+    if(!html) {
+        console.log(optimist.help());
+        process.exit(1);
     }
-
-    var html = arguments[0];
-    var out = 'protocol.json'
-    if(arguments.length > 1) {
-        out = arguments[1];
-    }
+    var out = optimist.argv.o;
 
     function each_packet() {
         var counter = 0;
