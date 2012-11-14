@@ -55,7 +55,15 @@ function parse(html, callback_packet, callback_packets) {
                         packet['id'] = id;
                     }
                     
-                    packet['name'] = $('span.mw-headline[id*="' + txtId + '"]').text().replace('(' + txtId + ')', '').trim();
+                    var packet_name_el = $('span.mw-headline[id*="' + txtId + '"]');
+                    packet['name'] = packet_name_el.text().replace('(' + txtId + ')', '').trim();
+
+                    var direction_el = packet_name_el.parent().next();
+                    var direction = direction_el.text().trim().replace(/\s/g, '_').toLowerCase();
+                    direction = direction.replace(/[-]/g, '_');
+                    
+                    packet['direction'] = direction;
+
                     //if(!packet['id']) return true; // next
                     var index = 0;
                     tr.find('td').each(function() {
