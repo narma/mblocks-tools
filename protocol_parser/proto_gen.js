@@ -12,7 +12,7 @@ var argv = optimist.argv;
 var required_dump_version = undefined;
 
 function get_protocol(filename) {
-    proto = JSON.parse(fs.readFileSync(filename, 'utf-8'));
+    var proto = JSON.parse(fs.readFileSync(filename, 'utf-8'));
     if(!required_dump_version) {
     	console.error("Must call proto.require(dump_version) before call this");
     	console.trace();
