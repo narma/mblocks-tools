@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var jsdom = require('jsdom');
 var fs = require('fs');
 var path = require('path');
@@ -14,7 +15,7 @@ var optimist = require('optimist')
 
 
 function parse(html, callback_packet, callback_packets) {
-    var jquery = fs.readFileSync("./jquery.js", 'utf-8');
+    var jquery = fs.readFileSync("./assets/jquery.js", 'utf-8');
     jsdom.env({
         html: html,
         //scripts: [jquery],

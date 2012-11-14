@@ -1,6 +1,6 @@
 #!/usr/bin/node
-var erlang = require('./erlang_syntax.js');
-var proto = require('./proto_gen.js');
+var erlang = require('./lib/erlang_syntax.js');
+var proto = require('./lib/proto_gen.js');
 var DUMP_VERSION = '1.0'
 
 function erlang_gen_get_header(packet) {
