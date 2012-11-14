@@ -13,13 +13,8 @@ var required_dump_version = undefined;
 
 function get_protocol(filename) {
     var proto = JSON.parse(fs.readFileSync(filename, 'utf-8'));
-    if(!required_dump_version) {
-    	console.error("Must call proto.require(dump_version) before call this");
-    	console.trace();
-    	process.exit(3)
-    }
 
-    if(proto['dump_version'] != required_dump_version) {
+    if(required_dump_version && proto['dump_version'] != required_dump_version) {
         console.error('Dump protocol mismatch, required ' + required_dump_version + ' getted ' + proto['dump_version']);
         process.exit(2);
     }
@@ -28,7 +23,7 @@ function get_protocol(filename) {
 
 
 exports.require = function(dump_version) {
-	required_dump_version = dump_version;
+    required_dump_version = dump_version;
 }
 exports.each_packet = function(callback) {
     var proto_filename = argv.p;

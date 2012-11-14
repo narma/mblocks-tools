@@ -1,7 +1,6 @@
 #!/usr/bin/node
 var erlang = require('./lib/erlang_syntax.js');
 var proto = require('./lib/proto_gen.js');
-var DUMP_VERSION = '1.0'
 
 function erlang_gen_get_header(packet) {
     var id = packet['id'];
@@ -18,7 +17,6 @@ function erlang_gen_get_header(packet) {
 }
 
 function main() {
-    proto.require(DUMP_VERSION);
     proto.each_packet(erlang_gen_get_header);
 }
 
