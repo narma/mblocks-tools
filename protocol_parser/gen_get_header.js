@@ -16,10 +16,6 @@ function erlang_gen_get_header(packet) {
     console.log('get_header(' + id + ') -> {ok, ' + packet_name + ', [' + acc.join(', ') + ']};');
 }
 
-function main() {
-    proto.each_packet(erlang_gen_get_header);
-}
-
 if (require.main === module) {
-    main();
+    proto.each_packet(erlang_gen_get_header);
 }
