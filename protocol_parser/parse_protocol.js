@@ -58,11 +58,21 @@ function parse(html, callback_packet, callback_packets) {
                     var packet_name_el = $('span.mw-headline[id*="' + txtId + '"]');
                     packet['name'] = packet_name_el.text().replace('(' + txtId + ')', '').trim();
 
+                    // direction
                     var direction_el = packet_name_el.parent().next();
                     var direction = direction_el.text().trim().replace(/\s/g, '_').toLowerCase();
                     direction = direction.replace(/[-]/g, '_');
-                    
+
                     packet['direction'] = direction;
+
+                    // description
+                    packet['description'] = []; 
+                    for(var curr_desc = direction_el.next();
+                        curr_desc[0].tagName.toLowerCase() == 'p';
+                        curr_desc = curr_desc.next()) 
+                    {
+                        packet['description'].push(curr_desc.text().trim());
+                    }
 
                     //if(!packet['id']) return true; // next
                     var index = 0;
