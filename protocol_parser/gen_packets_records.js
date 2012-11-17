@@ -25,8 +25,8 @@ var type_map = {
   'long': 'integer()',
   'short': 'integer()',
   'byte': 'integer()',
-  'ubyte': 'integer()',
-  'ushort': 'integer()',
+  'ubyte': 'non_neg_integer()',
+  'ushort': 'non_neg_integer()',
   'float': 'float()',
   'double': 'float()',
   'bool': 'boolean()',
@@ -52,7 +52,7 @@ function erlang_gen_packet_record(packet) {
       console.log();
     }
 
-    console.log('-record(pkt_' + packet_name + ', {');
+    console.log('-record(' + packet_name + ', {');
 
     var acc = ['  id = ' + id + ' :: integer()'];
     for(var f in fields) {
