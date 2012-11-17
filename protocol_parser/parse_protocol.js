@@ -7,9 +7,10 @@ var DUMP_VERSION = '1.0'
 
 var optimist = require('optimist')
     .usage('Parse Minecraft Protocol from http://wiki.vg/Protocol page.' +
-        '\nUsage: $0 <protocol> [-o <protocol.json>]' + 
+        '\nUsage: $0 <protocol> [-o <protocol.json>]' +
         '\n<protocol> may be filename or url.')
     .demand('o')
+    .demand(1)
     .default('o', 'protocol.json')
     .describe('o', 'out to this file')
 
@@ -55,7 +56,7 @@ function parse(html, callback_packet, callback_packets) {
                         id = parseInt(txtId.substr(2), 16);
                         packet['id'] = id;
                     }
-                    
+
                     var packet_name_el = $('span.mw-headline[id*="' + txtId + '"]');
                     packet['name'] = packet_name_el.text().replace('(' + txtId + ')', '').trim();
 
@@ -67,10 +68,10 @@ function parse(html, callback_packet, callback_packets) {
                     packet['direction'] = direction;
 
                     // description
-                    packet['description'] = []; 
+                    packet['description'] = [];
                     for(var curr_desc = direction_el.next();
                         curr_desc[0].tagName.toLowerCase() == 'p';
-                        curr_desc = curr_desc.next()) 
+                        curr_desc = curr_desc.next())
                     {
                         packet['description'].push(curr_desc.text().trim());
                     }
@@ -89,19 +90,21 @@ function parse(html, callback_packet, callback_packets) {
                         if(0 == index) field['name'] = val;
                         if(1 == index) {
                             if(val == 'boolean') val = 'bool';
+                            else if(val == 'unsigned byte') val = 'ubyte';
+                            else if(val == 'unsigned short') val = 'ushort';
                             field['type'] = val;
                         }
                         if(2 == index) field['ex'] = val;
                         if(3 == index) field['notes'] = val;
-                        index += 1; 
+                        index += 1;
                     });
                     packet['fields'].push(field);
                     index_tr += 1;
-                    
+
                 });
                 if(callback_packet) {
                     callback_packet(packet);
-                } 
+                }
                 if(callback_packets) {
                     packets.push(packet);
                 }
@@ -118,9 +121,9 @@ function write_out(out) {
             'dump_version': DUMP_VERSION,
             'packets': packets
         };
-        var data_jsoned = JSON.stringify(data);
+        var data_jsoned = JSON.stringify(data, undefined, '  ');
         fs.writeFile(out, data_jsoned, function (err) {
-          if (err) throw err;          
+          if (err) throw err;
         });
     }
 }
@@ -128,15 +131,11 @@ function write_out(out) {
 function main() {
 
     var html = optimist.argv._[0];
-    if(!html) {
-        console.log(optimist.help());
-        process.exit(1);
-    }
     var out = optimist.argv.o;
 
     function each_packet() {
         var counter = 0;
-        return function() {
+        return function(packet) {
             counter += 1;
             if(counter > 1) process.stdout.write("\r");
             process.stdout.write("Parsed " + counter + " packets");
