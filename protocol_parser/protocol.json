@@ -74,8 +74,8 @@
         {
           "name": "Protocol Version",
           "type": "byte",
-          "ex": "47",
-          "notes": "As of 1.4.2 the protocol version is 47"
+          "ex": "49",
+          "notes": "As of 1.4.4 the protocol version is 49"
         },
         {
           "name": "Username",
@@ -867,27 +867,9 @@
         },
         {
           "name": "Object Data",
-          "type": "int",
-          "ex": "0",
-          "notes": "If this is bigger than 0, the next 3 fields are sent."
-        },
-        {
-          "name": "Speed X",
-          "type": "short",
-          "ex": "0",
-          "notes": "Not sent if the Object data is 0. The speed of this entity along the X axis."
-        },
-        {
-          "name": "Speed Y",
-          "type": "short",
-          "ex": "0",
-          "notes": "Not sent if the Object data is 0. The speed of this entity along the Y axis."
-        },
-        {
-          "name": "Speed Z",
-          "type": "short",
-          "ex": "0",
-          "notes": "Not sent if the Object data is 0. The speed of this entity along the Z axis."
+          "type": "",
+          "ex": "",
+          "notes": "Object Data"
         }
       ],
       "id": 23,
@@ -2233,7 +2215,7 @@
         },
         {
           "name": "Text length",
-          "type": "ubyte",
+          "type": "short",
           "ex": "35",
           "notes": "Length of following byte array"
         },

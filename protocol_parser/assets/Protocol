@@ -18,7 +18,7 @@
 
 <script src="http://www.wiki.vg/wiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector&amp;*"></script>
 <script>if(window.mw){
-mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Protocol","wgTitle":"Protocol","wgCurRevisionId":3128,"wgArticleId":11,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Protocol Details","Minecraft Modern"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Protocol","wgRestrictionEdit":[],"wgRestrictionMove":[]});
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Protocol","wgTitle":"Protocol","wgCurRevisionId":3210,"wgArticleId":11,"wgIsArticle":true,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Protocol Details","Minecraft Modern"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgRelevantPageName":"Protocol","wgRestrictionEdit":[],"wgRestrictionMove":[]});
 }</script><script>if(window.mw){
 mw.loader.implement("user.options",function($){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,
 "watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"variant":"en","language":"en","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false});;},{},{});mw.loader.implement("user.tokens",function($){mw.user.tokens.set({"editToken":"+\\","watchToken":false});;},{},{});
@@ -342,9 +342,9 @@ The Beta server will disconnect a client if it doesn't receive at least one pack
 </td>
 <td class="col2 centeralign"> byte
 </td>
-<td class="col3 centeralign"> <code>47</code>
+<td class="col3 centeralign"> <code>49</code>
 </td>
-<td class="col4"> As of 1.4.2 the protocol version is 47
+<td class="col4"> As of 1.4.4 the protocol version is 49
 </td></tr>
 <tr class="row2">
 <td class="col0 centeralign"> Username
@@ -379,7 +379,7 @@ The Beta server will disconnect a client if it doesn't receive at least one pack
 <td class="col1 rightalign" colspan="4"> 10 bytes + length of strings
 </td></tr></table>
 <p><br />
-	<span id="0x03"></span>
+<span id="0x03"></span>
 </p>
 <h3> <span class="mw-headline" id="Chat_Message_.280x03.29"> Chat Message (0x03) </span></h3>
 <p><i>Two-Way</i>
@@ -388,68 +388,81 @@ The Beta server will disconnect a client if it doesn't receive at least one pack
 </p><p>For more information, see <a href="/Chat" title="Chat">Chat</a>.
 </p>
 <table class="wikitable">
-	<tr class="row0">
-		<td class="col0"> Packet ID</td>
-		<td class="col1"> Field Name</td>
-		<td class="col2"> Field Type</td>
-		<td class="col3"> Example</td>
-		<td class="col4"> Notes</td>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign"> 0x03</td>
-		<td class="col1 centeralign"> Message</td>
-		<td class="col2 centeralign"> string</td>
-		<td class="col3 centeralign"> <code>&lt;Bob&gt; Hello World!</code></td>
-		<td class="col4"> User input <b>must</b> be sanitized server-side</td>
-	</tr>
-	<tr class="row2">
-		<td class="col0"> Total Size:</td>
-		<td class="col1 rightalign" colspan="4"> 3 bytes + length of strings</td>
-	</tr>
-</table>
 
-
+<tr class="row0">
+<td class="col0"> Packet ID
+</td>
+<td class="col1"> Field Name
+</td>
+<td class="col2"> Field Type
+</td>
+<td class="col3"> Example
+</td>
+<td class="col4"> Notes
+</td></tr>
+<tr class="row1">
+<td class="col0 centeralign"> 0x03
+</td>
+<td class="col1 centeralign"> Message
+</td>
+<td class="col2 centeralign"> string
+</td>
+<td class="col3 centeralign"> <code>&lt;Bob&gt; Hello World!</code>
+</td>
+<td class="col4"> User input <b>must</b> be sanitized server-side
+</td></tr>
+<tr class="row2">
+<td class="col0"> Total Size:
+</td>
+<td class="col1 rightalign" colspan="4"> 3 bytes + length of strings
+</td></tr></table>
 <p><br />
+</p><p><span id="0x04"></span>
 </p>
-
-<p>
-<span id="0x04"></span>
-</p>
-
 <h3> <span class="mw-headline" id="Time_Update_.280x04.29"> Time Update (0x04) </span></h3>
 <p><i>Server to Client</i>
 </p><p>Time is based on ticks, where 20 ticks happen every second. There are 24000 ticks in a day, making Minecraft days exactly 20 minutes long.
 </p><p>The time of day is based on the timestamp modulo 24000. 0 is sunrise, 6000 is noon, 12000 is sunset, and 18000 is midnight.
 </p><p>The default SMP server increments the time by <code>20</code> every second.
 </p>
-
 <table class="wikitable">
-	<tr class="row0">
-		<th class="col0"> Packet ID</th>
-		<th class="col1"> Field Name</th>
-		<th class="col2"> Field Type</th>
-		<th class="col3"> Example</th>
-		<th class="col4"> Notes</th>
-	</tr>
-	<tr class="row1">
-		<td class="col0 centeralign" rowspan="2"> 0x04</td>
-		<td class="col1 centeralign"> Age of the world</td>
-		<td class="col2 centeralign"> long</td>
-		<td class="col3 centeralign"> 45464654</td>
-		<td class="col4"> In ticks; not changed by server commands</td>
-	</tr>
-	<tr class="row2">
-		<td class="col0 centeralign"> Time of Day</td>
-		<td class="col1 centeralign"> long</td>
-		<td class="col2 centeralign"> 21321</td>
-		<td class="col3"> The world (or region) time, in ticks</td>
-	</tr>
-	<tr class="row3">
-		<th class="col0"> Total Size:</th>
-		<td class="col1 rightalign" colspan="4"> 17 Bytes</td>
-	</tr>
-</table>
 
+<tr class="row0">
+<th class="col0"> Packet ID
+</th>
+<th class="col1"> Field Name
+</th>
+<th class="col2"> Field Type
+</th>
+<th class="col3"> Example
+</th>
+<th class="col4"> Notes
+</th></tr>
+<tr class="row1">
+<td class="col0 centeralign" rowspan="2"> 0x04
+</td>
+<td class="col1 centeralign"> Age of the world
+</td>
+<td class="col2 centeralign"> long
+</td>
+<td class="col3 centeralign"> 45464654
+</td>
+<td class="col4"> In ticks; not changed by server commands
+</td></tr>
+<tr class="row2">
+<td class="col0 centeralign"> Time of Day
+</td>
+<td class="col1 centeralign"> long
+</td>
+<td class="col2 centeralign"> 21321
+</td>
+<td class="col3"> The world (or region) time, in ticks
+</td></tr>
+<tr class="row3">
+<th class="col0"> Total Size:
+</th>
+<td class="col1 rightalign" colspan="4"> 17 Bytes
+</td></tr></table>
 <p><br />
 </p><p><span id="0x05"></span>
 </p>
@@ -1967,38 +1980,11 @@ The client will send this with Action ID = 3 when "Leave Bed" is clicked.
 <tr class="row6">
 <td class="col0 centeralign"> <a href="/Object_Data" title="Object Data">Object Data</a>
 </td>
-<td class="col1 centeralign"> int
+<td class="col1 centeralign">
 </td>
-<td class="col2 centeralign"> <code>0</code>
+<td class="col2 centeralign">
 </td>
-<td class="col3"> If this is bigger than 0, the next 3 fields are sent.
-</td></tr>
-<tr class="row7">
-<td class="col0 centeralign"> Speed X
-</td>
-<td class="col1 centeralign"> short
-</td>
-<td class="col2 centeralign"> <code>0</code>
-</td>
-<td class="col3"> Not sent if the Object data is 0. The speed of this entity along the X axis.
-</td></tr>
-<tr class="row5">
-<td class="col0 centeralign"> Speed Y
-</td>
-<td class="col1 centeralign"> short
-</td>
-<td class="col2 centeralign"> <code>0</code>
-</td>
-<td class="col3"> Not sent if the Object data is 0. The speed of this entity along the Y axis.
-</td></tr>
-<tr class="row5">
-<td class="col0 centeralign"> Speed Z
-</td>
-<td class="col1 centeralign"> short
-</td>
-<td class="col2 centeralign"> <code>0</code>
-</td>
-<td class="col3"> Not sent if the Object data is 0. The speed of this entity along the Z axis.
+<td class="col3"> <a href="/Object_Data" title="Object Data">Object Data</a>
 </td></tr>
 <tr class="row6">
 <td class="col0"> Total Size:
@@ -4888,7 +4874,7 @@ this packet allows at most four blocks movement in any direction. (-128/32 == -4
 <tr class="row3">
 <td class="col0 centeralign"> Text length
 </td>
-<td class="col1 centeralign"> unsigned byte
+<td class="col1 centeralign"> short
 </td>
 <td class="col2 centeralign"> <code>35</code>
 </td>
@@ -4906,13 +4892,13 @@ this packet allows at most four blocks movement in any direction. (-128/32 == -4
 <tr class="row9">
 <td class="col0"> Total Size:
 </td>
-<td class="col1 rightalign" colspan="4"> 6 bytes + Text length
+<td class="col1 rightalign" colspan="4"> 7 bytes + Text length
 </td></tr></table>
 <p><b>Maps</b>
 If the first byte of the text is 0, the next two bytes are X start and Y start and the rest of the bytes are the colors in that column.
 </p><p>If the first byte of the text is 1, the rest of the bytes are in groups of three: (data, x, y). The lower half of the data is the type (always 0 under vanilla) and the upper half is the direction.
 </p><p><br />
-</p><p><span id="0x84"></span>
+<span id="0x84"></span>
 </p>
 <h3> <span class="mw-headline" id="Update_Tile_Entity_.280x84.29"> Update Tile Entity (0x84) </span></h3>
 <p><i>Server to Client</i>
@@ -5575,11 +5561,11 @@ Template argument size: 304/2097152 bytes
 Expensive parser function count: 0/100
 -->
 
-<!-- Saved in parser cache with key minecraft-wiki_:pcache:idhash:11-0!*!0!!en!2!* and timestamp 20121110205424 -->
+<!-- Saved in parser cache with key minecraft-wiki_:pcache:idhash:11-0!*!0!!en!2!* and timestamp 20121117102411 -->
 </div>				<!-- /bodycontent -->
 								<!-- printfooter -->
 				<div class="printfooter">
-				Retrieved from "<a href="http://www.wiki.vg/wiki/index.php?title=Protocol&amp;oldid=3128">http://www.wiki.vg/wiki/index.php?title=Protocol&amp;oldid=3128</a>"				</div>
+				Retrieved from "<a href="http://www.wiki.vg/wiki/index.php?title=Protocol&amp;oldid=3210">http://www.wiki.vg/wiki/index.php?title=Protocol&amp;oldid=3210</a>"				</div>
 				<!-- /printfooter -->
 												<!-- catlinks -->
 				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/Category:Protocol_Details" title="Category:Protocol Details">Protocol Details</a></li><li><a href="/Category:Minecraft_Modern" title="Category:Minecraft Modern">Minecraft Modern</a></li></ul></div></div>				<!-- /catlinks -->
@@ -5703,7 +5689,7 @@ Expensive parser function count: 0/100
 			<li id="t-recentchangeslinked"><a href="/Special:RecentChangesLinked/Protocol" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li>
 			<li id="t-specialpages"><a href="/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li>
 			<li><a href="/wiki/index.php?title=Protocol&amp;printable=yes" rel="alternate">Printable version</a></li>
-			<li id="t-permalink"><a href="/wiki/index.php?title=Protocol&amp;oldid=3128" title="Permanent link to this revision of the page">Permanent link</a></li>
+			<li id="t-permalink"><a href="/wiki/index.php?title=Protocol&amp;oldid=3210" title="Permanent link to this revision of the page">Permanent link</a></li>
 		</ul>
 	</div>
 </div>
@@ -5718,8 +5704,8 @@ Expensive parser function count: 0/100
 		<!-- footer -->
 		<div id="footer">
 							<ul id="footer-info">
-											<li id="footer-info-lastmod"> This page was last modified on 29 October 2012, at 06:33.</li>
-											<li id="footer-info-viewcount">This page has been accessed 181,164 times.</li>
+											<li id="footer-info-lastmod"> This page was last modified on 14 November 2012, at 12:41.</li>
+											<li id="footer-info-viewcount">This page has been accessed 182,947 times.</li>
 											<li id="footer-info-copyright">Content is available under <a class="external" href="http://creativecommons.org/licenses/by-sa/3.0/">Attribution-ShareAlike 3.0 Unported</a>.</li>
 									</ul>
 							<ul id="footer-places">
@@ -5742,6 +5728,6 @@ Expensive parser function count: 0/100
 <script>if(window.mw){
 mw.loader.load(["mediawiki.user","mediawiki.page.ready"], null, true);
 }</script>
-<!-- Served in 0.327 secs. -->
+<!-- Served in 0.364 secs. -->
 	</body>
 </html>
