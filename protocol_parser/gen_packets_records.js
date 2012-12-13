@@ -54,7 +54,7 @@ function erlang_gen_packet_record(packet) {
 
     console.log('-record(' + packet_name + ', {');
 
-    var acc = ['  id = ' + id + ' :: integer()'];
+    var acc = ['  pkt = ' + id + ' :: integer()'];
     for(var f in fields) {
       var field = fields[f];
       var field_type = erlang.atomize(field['type']);
